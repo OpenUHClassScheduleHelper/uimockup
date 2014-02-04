@@ -1,1 +1,87 @@
-My GitHub Page
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>OpenUHScheduleHelper</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+<!--  Load site-specific customizations after bootstrap. -->
+<link rel="stylesheet" href="style.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<!-- Load Bootstrap JavaScript components -->
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load Google Fonts -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
+
+
+<script type='text/javascript'>        
+$(document).ready(function() {
+/* off-canvas sidebar toggle */
+$('[data-toggle=offcanvas]').click(function() {
+    $(this).toggleClass('visible-xs text-center');
+    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+    $('.row-offcanvas').toggleClass('active');
+    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
+    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
+    $('#btnShow').toggle();
+ });       
+});
+</script>
+  
+<div class="wrapper">
+    <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">
+                      
+          
+            <!-- sidebar -->
+            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+              
+                <ul class="nav">
+                    <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                </ul>
+               
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li class="active"><a href="#featured"><i class="glyphicon glyphicon-search"></i> Search</a></li>
+                    <li><a href="#stories"><i class="glyphicon glyphicon-print"></i> Print Schedule</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Email Schedule</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-road"></i> View Map</a></li>
+                    <br>
+                    <li><a href="#"><i class="glyphicon glyphicon-plus"></i> New Account</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-user"></i> Login</a></li>
+                </ul>
+              
+                <!-- tiny only nav-->
+              <ul class="nav visible-xs" id="xs-menu">
+                    <li><a href="#featured" class="text-center"><i class="glyphicon glyphicon-search"></i></a></li>
+                    <li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-print"></i></a></li>
+                    <li><a href="#" class="text-center"><i class="glyphicon glyphicon-envelope"></i></a></li>
+                    <li><a href="#" class="text-center"><i class="glyphicon glyphicon-road"></i></a></li>
+                    <br>
+                    <li><a href="#" class="text-center"><i class="glyphicon glyphicon-plus"></i></a></li>
+                    <li><a href="#" class="text-center"><i class="glyphicon glyphicon-user"></i></a></li>
+                </ul>
+              
+            </div>
+            <!-- /sidebar -->
+            <div class="header"></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+
+</html>
