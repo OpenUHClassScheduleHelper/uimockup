@@ -1,35 +1,24 @@
+
+.navbar-text{
+  margin-top: 30px;
+  font-size: 35px;
+  font-style: italic;
+}
+
+.navbar-brand {
+  width: 100px;
+}
+
+
 /* custom template */
-
-.header {
-  background: url("./header.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 65px;
-  margin-left: 125px;
-}
-
-.box {
-    bottom: 0; /* increase for footer use */
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    background-image:url('./manoaseal_watermark2.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-}
-
-
 html, body {
    height: 100%;
-   font-family:ubuntu, verdana,arial,sans-serif;
+   font-family: Ubuntu, verdana,arial,sans-serif;
    color:#555555;
 }
 
 .nav {
-   font-family:Ubuntu, Arial,sans-serif;
+   font-family: Ubuntu, Arial,sans-serif;
    font-size:13px;
 }
 
@@ -76,7 +65,19 @@ hr {
     padding-top:70px;
 }
 
-
+.box {
+    bottom: 0; /* increase for footer use */
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color:#444444;
+  /*
+    background-image:url('/assets/example/bg_suburb.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+  */
+}
 
 .divider {
     margin-top:32px;
@@ -86,7 +87,7 @@ hr {
     border-width:0;
     background-color:#3B5999;
     color:#ffffff;
-    font-family:arial,sans-serif;
+    font-family: Abel,arial,sans-serif;
     top:0;
     position:fixed;
     width:inherit;
@@ -105,7 +106,7 @@ hr {
 }
 
 #main {
-   background-color:#e9eaed;
+   background-color:white;
    padding-left:0;
    padding-right:0;
 }
@@ -136,7 +137,7 @@ hr {
   background-color:#fff;
   color:#3B5999;
   height:28px;
-  width:28px;
+  width:50px;
   margin:9px;
   margin-right:2px;
   margin-left:15px;
@@ -244,7 +245,7 @@ h1,h2,h3 {
 }
 
 small.text-muted {
-  font-family:courier,courier-new,monospace;
+  font-family:Ubuntu,courier,courier-new,monospace;
 }
 
 /* adjust the contents on smaller devices */
