@@ -7,10 +7,12 @@
 
 td, th {
   text-align: center;
+  padding: 5px;
 } 
 
 h2 {
   margin-top: 3%;
+  margin-left: 10px;
 }
 
 .login-panel { 
@@ -34,6 +36,10 @@ h2 {
 
 .navbar-brand {
   width: 100px;
+}
+
+#lg-menu {
+font-size: 18px;
 }
 
 
