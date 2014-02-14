@@ -6,6 +6,14 @@
     text-align: center;
 }
 
+.schedule-image {
+  height: 250px;
+  width: 400px;
+  background-image: url("schedule.jpg");
+  btackground-size: cover;
+  float: inherit;
+}
+
 .block-text {
     margin-top: 1em;
     font-size: 15px;
@@ -20,12 +28,12 @@
 
 .colorblock-silver {
   background: #CECECE;
-  height: 25em;
+  min-height: 25em;
 }
 
 .colorblock-white {
   background: white;
-  height: 25em;
+  min-height: 25em;
 }
 /************* End On Boarding CSS *************/
 
