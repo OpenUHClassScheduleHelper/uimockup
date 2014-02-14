@@ -2,73 +2,49 @@
 <html>
 
 <head>
-<title>OpenUHScheduleHelper</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
+  <title>OpenUHScheduleHelper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
     href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 
-<-- glyphicons -->
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <-- glyphicons -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-<!--  Load site-specific customizations after bootstrap. -->
-<link rel="stylesheet" href="style.css">
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
-<![endif]-->
+  <!--  Load site-specific customizations after bootstrap. -->
+  <link rel="stylesheet" href="style.css">
+   
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
 </head>
+
 <body>
 
-    <!-- Load Bootstrap JavaScript components -->
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script
-        src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-    <!-- Load Google Fonts -->
-    <link rel="stylesheet" type="text/css"
-        href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
+  <!-- Load Google Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
-    <script type='text/javascript'>
-					$(document)
-							.ready(
-									function() {
-										/* off-canvas sidebar toggle */
-										$('[data-toggle=offcanvas]')
-												.click(
-														function() {
-															$(this)
-																	.toggleClass(
-																			'visible-xs text-center');
-															$(this)
-																	.find('i')
-																	.toggleClass(
-																			'glyphicon-chevron-right glyphicon-chevron-left');
-															$('.row-offcanvas')
-																	.toggleClass(
-																			'active');
-															$('#lg-menu')
-																	.toggleClass(
-																			'hidden-xs')
-																	.toggleClass(
-																			'visible-xs');
-															$('#xs-menu')
-																	.toggleClass(
-																			'visible-xs')
-																	.toggleClass(
-																			'hidden-xs');
-															$('#btnShow')
-																	.toggle();
-														});
-									});
-				</script>
+  <script type='text/javascript'>
+	$(document).ready(function() {   /* off-canvas sidebar toggle */
+		$('[data-toggle=offcanvas]').click(function() {
+		    $(this).toggleClass('visible-xs text-center');
+		    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+		    $('.row-offcanvas').toggleClass('active');
+		    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
+		    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
+		    $('#btnShow').toggle();
+		});
+	});
+  </script>
 
-    <div class="wrapper">
+  <div class="wrapper">
         <div class="box">
             <div class="row row-offcanvas row-offcanvas-left">
-
-
                 <!-- sidebar -->
                 <div class="column col-sm-2 col-xs-1 sidebar-offcanvas"
                     id="sidebar">
@@ -104,46 +80,50 @@
                     <!-- tiny only nav-->
                     <ul class="nav visible-xs" id="xs-menu">
                         <li><a href="search.html"
-                            class="text-center"><i
-                                class="glyphicon glyphicon-search"></i></a></li>
+                            class="text-center">
+                              <i class="glyphicon glyphicon-search"></i></a></li>
                         <li><a href="print.html"
-                            class="text-center"><i
-                                class="glyphicon glyphicon-print"></i></a></li>
+                            class="text-center">
+                              <i class="glyphicon glyphicon-print"></i></a></li>
                         <li><a href="email.html"
-                            class="text-center"><i
-                                class="glyphicon glyphicon-envelope"></i></a></li>
-                        <li><a href="map.html" class="text-center"><i
-                                class="glyphicon glyphicon-road"></i></a></li>
+                            class="text-center">
+                              <i class="glyphicon glyphicon-envelope"></i></a></li>
+                        <li><a href="map.html" class="text-center">
+                             <i class="glyphicon glyphicon-road"></i></a></li>
                         <br>
                         <li><a href="register.html"
-                            class="text-center"><i
-                                class="glyphicon glyphicon-plus"></i></a></li>
+                            class="text-center">
+                              <i class="glyphicon glyphicon-plus"></i></a></li>
                         <li><a href="login.html"
-                            class="text-center"><i
-                                class="glyphicon glyphicon-user"></i></a></li>
+                            class="text-center">
+                              <i class="glyphicon glyphicon-user"></i></a></li>
                     </ul>
                 </div>
                 <!-- /sidebar -->
 
                 <!-- main right col -->
                 <div class="column col-sm-10 col-xs-11" id="main">
-                    <!-- top nav -->
-                    <div class="navbar" id="main-nav-xs"
-                      <a href="index.html"><div class="visible-xs"><img class="banner" src="header_banner.jpg"></div></a>
-					<a href="index.html">
-                    <div class="hidden-xs">
-                      <img class="pull-left" width="100px" src="UH_Warriors.jpg">
-                      <p class="navbar-text">UH Class Schedule Helper</p>
-                    </div>
-					</a>
-                    </div>
-                    <!-- /top nav -->
 
+                    <!-- Header Mobile -->
+                    <div class="visible-xs visible-sm">
+                        <a href="index.html"><div class="header_banner"></div></a>
+                    </div>
+                
+                    <!-- Header Desktop/Laptop -->
+                    <div class="hidden-sm hidden-xs">
+                        <a href="index.html">
+                            <img class="pull-left" width="100px" src="UH_Warriors.jpg">
+                            <p class="navbar-text">UH Class Schedule Helper</p>
+                        </a>
+                    </div>
+					 
+
+                    <!-- Search Box -->
                     <div
-                        style="height: 300px; width: 100%; overflow: hidden; background-image: url(bg-2.jpg); background-repeat: no-repeat; background-size: 100% 300px; border-top: 1px solid black; border-bottom: 1px solid black;">
+                        style="height: 300px; width: 100%; overflow: hidden; background-image: url(breeze.jpg); background-repeat: no-repeat; background-size: 100% 300px; border-top: 1px solid black; border-bottom: 1px solid black;">
 
                         <div
-                            style="margin-top: 125px; margin-bottom: 25px; margin-left: 50px; margin-right: 50px; height: 250px; width: auto; opacity: 0.92; text-align: center;">
+                            style="margin-top: 125px; margin-bottom: 25px; margin-left: 50px; margin-right: 50px; height: 40px; width: auto; opacity: 0.92; text-align: center;">
                             <form class="searchform">
                                 <input class="searchfield" type="text"
                                     value="Begin searching for classes..."
@@ -153,10 +133,140 @@
                                     type="button" value="Go" />
                             </form>
                         </div>
+                       <div class="block-header">
+                         <div class="intro-text">
+                           Making Registration a Breeze!
+                         </div>
+                        </div>
                     </div>
-                    <!-- coming soon -->
+                    
+                    <!-- Convenience Block -->
+                    <div class="container">
+                      <div class="colorblock-white">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="block-header">
+                              Conveniently create a schedule
+                            </div>
+                            <div class="block-text">
+                              Use our simple but powerful search tool to find the classes you need. 
+                              Add them to your schedule then save it so you can come back to it later.               
+                            </div>
+                          </div>  <!-- End of col-md-6 (Text Columns) -->
+                          <div class="col-md-6">
+                            <img class="block-image" src="schedule.jpg">
+                          </div>  <!-- End of col-md-6 (Image Columns) -->
+                        </div> <!-- End of row -->
+                      </div> <!-- End of color block -->
+                    </div> <!-- End of container -->
+                    
+                    <!-- Search Block -->
+                    <div class="container">
+                      <div class="colorblock-silver">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="block-header">
+                              Quickly Search for classes
+                            </div>
+                            <div class="block-text">
+                              Use our simple but powerful search tool to find the classes you need. 
+                              Add them to your schedule then save it so you can come back to it later.               
+                            </div>
+                          </div>  <!-- End of col-md-6 (Text Columns) -->
+                          <div class="col-md-6">
+                            <img class="block-image" src="search.png">
+                          </div>  <!-- End of col-md-6 (Image Columns) -->
+                        </div> <!-- End of row -->
+                      </div> <!-- End of color block -->
+                    </div> <!-- End of container -->
+                    
+                    <!-- Mobile Design Block -->
+                    <div class="container">
+                      <div class="colorblock-white">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="block-header">
+                              Easy to use mobile design
+                            </div>
+                            <div class="block-text">
+                              We know you're busy and always on the go. That's why we built 
+                              this site with a mobile first attitude. Access it from your laptop or
+                              your smartphone. It's all good!
+                            </div>
+                          </div>  <!-- End of col-md-6 (Text Columns) -->
+                          <div class="col-md-6">
+                            <img class="block-image" src="smartphone.png">
+                          </div>  <!-- End of col-md-6 (Image Columns) -->
+                        </div> <!-- End of row -->
+                      </div> <!-- End of color block -->
+                    </div> <!-- End of container -->
+                    
+                    <!-- Up-To-Date Info Block -->
+                    <div class="container">
+                      <div class="colorblock-silver">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="block-header">
+                              Up-To-Date Information
+                            </div>
+                            <div class="block-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                              Duis sed risus eget lacus consectetur accumsan. Nulla id vestibulum 
+                              lorem. In augue ante, rhoncus eget elit quis, sodales venenatis nibh. 
+                            </div>
+                          </div>  <!-- End of col-md-6 (Text Columns) -->
+                          <div class="col-md-6">
+                            <img class="block-image" src="refresh.png">
+                          </div>  <!-- End of col-md-6 (Image Columns) -->
+                        </div> <!-- End of row -->
+                      </div> <!-- End of color block -->
+                    </div> <!-- End of container -->
+                    
+                     <!-- Map Block -->
+                    <div class="container">
+                      <div class="colorblock-white">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="block-header">
+                              Map your route between classes
+                            </div>
+                            <div class="block-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta 
+                              est purus, in rhoncus mauris eleifend a. Donec imperdiet eros vitae odio 
+                              consectetur, at pellentesque enim tristique. Mauris varius accumsan.              
+                            </div>
+                          </div>  <!-- End of col-md-6 (Text Columns) -->
+                          <div class="col-md-6">
+                            <img class="block-image" src="map.png">
+                          </div>  <!-- End of col-md-6 (Image Columns) -->
+                        </div> <!-- End of row -->
+                      </div> <!-- End of color block -->
+                    </div> <!-- End of container -->
+                    
+                    <!-- Testmony Block -->
+                    <div class="container">
+                      <div class="colorblock-silver">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="block-header">
+                              Hear from other users
+                            </div>
+                            <div class="block-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin 
+                              tempor arcu vel mattis malesuada. Pellentesque ultrices quis orci 
+                              et aliquam. Donec rutrum neque elit, in suscipit turpis porttitor 
+                              blandit. Suspendisse.             
+                            </div>
+                          </div>  <!-- End of col-md-6 (Text Columns) -->
+                          <div class="col-md-6">
+                            <img class="block-image" src="testimony.png">
+                          </div>  <!-- End of col-md-6 (Image Columns) -->
+                        </div> <!-- End of row -->
+                      </div> <!-- End of color block -->
+                    </div> <!-- End of container -->
+                    
                     <div
-                        style="height: 109px; width: 100%; background-color: #CECECE; text-align: center; margin-top: 0px; margin-bottom: 10px;">
+                        style="height: 109px; width: 100%; background-color: white; text-align: center; margin-top: 0px; margin-bottom: 10px;">
                         <p
                             style="padding: 40px; font-size: 18px; color: black">
                             Social: <a href="/"

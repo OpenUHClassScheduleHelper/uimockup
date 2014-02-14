@@ -1,3 +1,53 @@
+/************* Begin On Boarding CSS *************/
+
+.block-header {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+.block-image {
+  display: block;
+  max-height: 250px;
+  max-width: 400px;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-text {
+    margin-top: 1em;
+    font-size: 20px;
+    color: black;
+    text-align: center;  
+}
+
+.intro-text {
+    text-align: left;
+    margin-top: 85px;
+}
+
+.colorblock-silver {
+  background: #CECECE;
+  min-height: 300px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.colorblock-white {
+  background: white;
+  min-height: 300px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/************* End On Boarding CSS *************/
+
 .searchform {
     display: inline-block;
     zoom: 1; /* ie7 hack for display:inline-block */
@@ -73,8 +123,10 @@ h2 {
   margin-left: 10px;
 }
 
-.banner {
-  width: 100%;
+.header_banner {
+  height: 95px;
+  background-image: url("header_banner.jpg");
+  background-repeat: no-repeat;
 }
 
 .login-panel { 
@@ -170,7 +222,7 @@ hr {
     position: absolute;
     right: 0;
     top: 0;
-    background-color:#444444;
+    background-color: #005837; /* changing this will result in an off color bar to the left of side navbar. rnamahoe */
   /*
     background-image:url('/assets/example/bg_suburb.jpg');
     background-size:cover;
@@ -221,8 +273,8 @@ hr {
 }
 
 #sidebar, #sidebar a, #sidebar-footer a {
-    color:#ffffff;
-    background-color:#005837; /*#00885A*/
+    color: #ffffff;
+    background-color: #005837; /*#00885A*/
     text-shadow:0 0 2px #000000;
     padding-left:5px;
 }
