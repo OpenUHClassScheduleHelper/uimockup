@@ -153,6 +153,7 @@ h2 {
   height: 95px;
   background-image: url("header_banner.jpg");
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .login-panel {
