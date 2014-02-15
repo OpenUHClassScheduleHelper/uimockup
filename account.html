@@ -43,14 +43,14 @@ $('[data-toggle=offcanvas]').click(function() {
 
 <script type='text/javascript'>
 $(document).ready(function() {
-$('#button1').click(function() {
+$('#myclassbutton1').click(function() {
 
-    if($('#result1').is(":visible")) {
-    $('#result1').slideUp(600, function() {
+    if($('#myclassinfo1').is(":visible")) {
+    $('#myclassinfo1').slideUp(600, function() {
     		//Animation Complete
     });
 	} else {
-	$('#result1').slideDown(900, function() {
+	$('#myclassinfo1').slideDown(900, function() {
     		//Animation Complete
     });
 	}
@@ -118,10 +118,10 @@ $('#button1').click(function() {
 					<h2>My Courses</h2>
 					
 					<div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="button1"> 
+					  <a class="btn course-dropdown-button" id="myclassbutton1"> 
 						ICS 111 Intro to Computer Science I
 					  </a>
-					  <div class="mobileresults" id="result1">
+					  <div class="mobileresults" id="myclassinfo1">
 					    <p><b>CRN: </b><br>84935</p>
 						<hr></hr>
 						<p><b>Gen Ed./Focus: </b><br> </p>
@@ -141,7 +141,7 @@ $('#button1').click(function() {
 					
 					
 					
-					<table class="result-table table-striped hidden-sm hidden-xs">
+					<table class="my-courses-table table-striped hidden-sm hidden-xs">
 					<tr>
 					<th>CRN</th>
 					<th>Course</th>

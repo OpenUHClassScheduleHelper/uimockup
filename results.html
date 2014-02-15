@@ -37,6 +37,66 @@ $('[data-toggle=offcanvas]').click(function() {
 });
 </script>
 
+<script type='text/javascript'>
+$(document).ready(function() {
+$('#resultbutton1').click(function() {
+
+    if($('#resultinfo1').is(":visible")) {
+    $('#resultinfo1').slideUp(600, function() {
+    		//Animation Complete
+    });
+	} else {
+	$('#resultinfo1').slideDown(900, function() {
+    		//Animation Complete
+    });
+	}
+	
+});
+
+$('#resultbutton2').click(function() {
+
+    if($('#resultinfo2').is(":visible")) {
+    $('#resultinfo2').slideUp(600, function() {
+    		//Animation Complete
+    });
+	} else {
+	$('#resultinfo2').slideDown(900, function() {
+    		//Animation Complete
+    });
+	}
+	
+});
+
+$('#resultbutton3').click(function() {
+
+    if($('#resultinfo3').is(":visible")) {
+    $('#resultinfo3').slideUp(600, function() {
+    		//Animation Complete
+    });
+	} else {
+	$('#resultinfo3').slideDown(900, function() {
+    		//Animation Complete
+    });
+	}
+	
+});
+
+$('#myclassbutton1').click(function() {
+
+    if($('#myclassresult1').is(":visible")) {
+    $('#myclassresult1').slideUp(600, function() {
+    		//Animation Complete
+    });
+	} else {
+	$('#myclassresult1').slideDown(900, function() {
+    		//Animation Complete
+    });
+	}
+	
+});
+});
+</script>
+
 
 <div class="wrapper">
     <div class="box">
@@ -88,15 +148,68 @@ $('[data-toggle=offcanvas]').click(function() {
                 <!-- /top nav -->
                <div> 
 			     <h2>Results</h2>
-			     <table class="result-table table-striped">
+				 
+				 <div class="visible-sm visible-xs">
+					  <a class="btn course-dropdown-button" id="resultbutton1"> 
+						ICS 111 Intro to Computer Science I
+					  </a>
+					  <div class="mobileresults" id="resultinfo1">
+					    <p><b>CRN: </b><br>84935</p>
+						<hr></hr>
+						<p><b>Gen Ed./Focus: </b><br> </p>
+						<hr></hr>
+						<p><b>Instructor: </b><br>Ravi Narayan</p>
+						<hr></hr>
+						<p><b>Location: </b><br>POST 127<br>POST 319</p>
+						<hr></hr>
+						<p><b>Time: </b><br>M 0530-0800p<br>W 0530-0645p</p>
+						<hr></hr>
+						<p></p>
+					  </div>
+					  <a class="btn course-dropdown-button" id="resultbutton2"> 
+						ICS 142 Discrete Math for CS I
+					  </a>
+					  <div class="mobileresults" id="resultinfo2">
+					    <p><b>CRN: </b><br>84095</p>
+						<hr></hr>
+						<p><b>Gen Ed./Focus: </b><br> </p>
+						<hr></hr>
+						<p><b>Instructor: </b><br>Kazuo Sugihara</p>
+						<hr></hr>
+						<p><b>Location: </b><br>BIL 150<br>MSB 114</p>
+						<hr></hr>
+						<p><b>Time: </b><br>TR 0130-0245p<br>F 1200-0115p</p>
+						<hr></hr>
+						<p><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></p>
+					  </div>
+					  <a class="btn course-dropdown-button" id="resultbutton3"> 
+						ICS 212 Program Structure
+					  </a>
+					  <div class="mobileresults" id="resultinfo3">
+					    <p><b>CRN: </b><br>84494</p>
+						<hr></hr>
+						<p><b>Gen Ed./Focus: </b><br> </p>
+						<hr></hr>
+						<p><b>Instructor: </b><br>Julia Patriarche</p>
+						<hr></hr>
+						<p><b>Location: </b><br>TBA</p>
+						<hr></hr>
+						<p><b>Time: </b><br>TBA</p>
+						<hr></hr>
+						<p><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></p>
+					  </div>
+					</div>
+				 
+				 
+			     <table class="result-table table-striped hidden-sm hidden-xs">
 				 <tr>
 				   <th>CRN</th>
 				   <th>Course</th>
-				   <th class="hidden-xs">Title</th>
-				   <th class="hidden-xs hidden-sm">Department</th>
+				   <th>Title</th>
+				   <th>Department</th>
 				   <th>Gen Ed./Focus</th>
 				   <th>Instructor</th>
-				   <th class="hidden-xs hidden-sm">Location</th>
+				   <th>Location</th>
 				   <th>Time</th>
 				   <th></th>
 				 </tr>
@@ -104,22 +217,22 @@ $('[data-toggle=offcanvas]').click(function() {
 				 <tr>
 				   <td>84935</td>
 				   <td>ICS 111</td>
-				   <td class="hidden-xs">Intro to Computer Science I</td>
-				   <td class="hidden-xs hidden-sm">ICS</td>
+				   <td>Intro to Computer Science I</td>
+				   <td>ICS</td>
 				   <td></td>
 				   <td>Ravi Narayan</td>
-				   <td class="hidden-xs hidden-sm">POST 127, POST 319</td>
+				   <td>POST 127, POST 319</td>
 				   <td>M 0530-0800p, W 0530-0645p</td>
 				 </tr>
 				 
 				 <tr>
 				   <td>84095</td>
 				   <td>ICS 141</td>
-				   <td class="hidden-xs">Discrete Math for CS I</td>
-				   <td class="hidden-xs hidden-sm">ICS</td>
+				   <td>Discrete Math for CS I</td>
+				   <td>ICS</td>
 				   <td></td>
 				   <td>Kazuo Sugihara</td>
-				   <td class="hidden-xs hidden-sm">BIL 150, MSB 114</td>
+				   <td>BIL 150, MSB 114</td>
 				   <td>TR 0130-0245p, F 1200-0115p</td>
 				   <td><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></td>
 				 </tr>
@@ -127,11 +240,11 @@ $('[data-toggle=offcanvas]').click(function() {
 				 <tr>
 				   <td>84494</td>
 				   <td>ICS 212</td>
-				   <td class="hidden-xs">Program Structure</td>
-				   <td class="hidden-xs hidden-sm">ICS</td>
+				   <td>Program Structure</td>
+				   <td>ICS</td>
 				   <td></td>
 				   <td>Julia Patriarche</td>
-				   <td class="hidden-xs hidden-sm">TBA</td>
+				   <td>TBA</td>
 				   <td>TBA</td>
 				   <td><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></td>
 				 </tr>
@@ -141,15 +254,36 @@ $('[data-toggle=offcanvas]').click(function() {
 					
 				</div>
 				  <h2>My Courses</h2>
-				  <table class="result-table table-striped">
+				  
+				  <div class="visible-sm visible-xs">
+					  <a class="btn course-dropdown-button" id="myclassbutton1"> 
+						ICS 111 Intro to Computer Science I
+					  </a>
+					  <div class="mobileresults" id="myclassresult1">
+					    <p><b>CRN: </b><br>84935</p>
+						<hr></hr>
+						<p><b>Gen Ed./Focus: </b><br> </p>
+						<hr></hr>
+						<p><b>Instructor: </b><br>Ravi Narayan</p>
+						<hr></hr>
+						<p><b>Location: </b><br>POST 127<br>POST 319</p>
+						<hr></hr>
+						<p><b>Time: </b><br>M 0530-0800p<br> W 0530-0645p</p>
+						<hr></hr>
+						<p><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></p>
+					  </div>
+					</div>
+				  
+				  
+				  <table class="my-courses-table table-striped hidden-sm hidden-xs">
 				    <tr>
 				   <th>CRN</th>
 				   <th>Course</th>
-				   <th class="hidden-xs">Title</th>
-				   <th class="hidden-xs hidden-sm">Department</th>
+				   <th>Title</th>
+				   <th>Department</th>
 				   <th>Gen Ed./Focus</th>
 				   <th>Instructor</th>
-				   <th class="hidden-xs hidden-sm">Location</th>
+				   <th>Location</th>
 				   <th>Time</th>
 				   <th></th>
 				   </tr>
@@ -157,18 +291,15 @@ $('[data-toggle=offcanvas]').click(function() {
 				   <tr>
 				   <td>84935</td>
 				   <td>ICS 111</td>
-				   <td class="hidden-xs">Intro to Computer Science I</td>
-				   <td class="hidden-xs hidden-sm">ICS</td>
+				   <td>Intro to Computer Science I</td>
+				   <td>ICS</td>
 				   <td></td>
 				   <td>Ravi Narayan</td>
-				   <td class="hidden-xs hidden-sm">POST 127, POST 319</td>
+				   <td>POST 127, POST 319</td>
 				   <td>M 0530-0800p, W 0530-0645p</td>
 				   <td><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></td>
-				 </tr>
+				   </tr>
 				  </table>
-				<div>
-				
-				</div>
              
             </div>
             <!-- /main -->
