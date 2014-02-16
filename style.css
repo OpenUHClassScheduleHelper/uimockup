@@ -1,4 +1,26 @@
 /************* Begin On Boarding CSS *************/
+.onboarding-picture-block {
+  height: 300px; 
+  width: 100%; 
+  overflow: hidden; 
+  background-image: url('breeze.jpg'); 
+  background-repeat: no-repeat; 
+  background-size: 100% 300px; 
+  border-top: 1px solid black; 
+  border-bottom: 1px solid black;
+}
+
+.onboarding-search-box {
+  margin-top: 125px; 
+  margin-bottom: 25px; 
+  margin-left: 50px; 
+  margin-right: 50px; 
+  height: 40px; 
+  width: auto; 
+  opacity: 0.92; 
+  text-align: center;                         
+}
+
 .block-header {
   font-size: 30px;
   color: black;
@@ -23,9 +45,12 @@
 }
 
 .intro-text {
+  font-size: 28px;
+  font-style: italic;
+  color: black;
   text-align: left;
-  margin-top: 85px;
-  width: 40%;
+  margin-top: 60px;
+  
 }
 
 .colorblock-silver {
