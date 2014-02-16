@@ -30,17 +30,36 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
   <script type='text/javascript'>
-    $(document).ready(function() {   /* off-canvas sidebar toggle */
-        $('[data-toggle=offcanvas]').click(function() {
-            $(this).toggleClass('visible-xs text-center');
-            $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
-            $('.row-offcanvas').toggleClass('active');
-            $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
-            $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
-            $('#btnShow').toggle();
-        });
-    });
+	$(document).ready(function() {   /* off-canvas sidebar toggle */
+		$('[data-toggle=offcanvas]').click(function() {
+		    $(this).toggleClass('visible-xs text-center');
+		    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+		    $('.row-offcanvas').toggleClass('active');
+		    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
+		    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
+		    $('#btnShow').toggle();
+		});
+	});
   </script>
+  
+  <script type="text/javascript">
+            $(function() {
+                $('ul.nav a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+                    /*
+                    if you don't want to use the easing effects:
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1000);
+                    */
+                    event.preventDefault();
+                });
+            });
+        </script>
 
   <div class="wrapper">
         <div class="box">
@@ -102,7 +121,7 @@
                 <!-- /sidebar -->
 
                 <!-- main right col -->
-                <div class="column col-sm-10 col-xs-11 maincol" id="main">
+                <div class="column col-sm-10 col-xs-11" id="main">
 
                     <!-- Header Mobile -->
                     <div class="visible-xs visible-sm">
@@ -116,34 +135,47 @@
                             <p class="navbar-text">UH Class Schedule Helper</p>
                         </a>
                     </div>
+					 
+                    <div class="container">
+                      <div class="colorblock-white">
+                        <div class="row">
+                          <div class="col-md-6">
+                          </div>  <!-- End of col-md-6 (Text Columns) -->
+                          <div class="col-md-6">
+                            <img class="block-image" src="underconstruction.jpg">
+                          </div>  <!-- End of col-md-6 (Image Columns) -->
+                        </div> <!-- End of row -->
+                      </div> <!-- End of color block -->
+                    </div> <!-- End of container -->
                     
-                <div class="full col-sm-6 login-panel">
-                      <h4 class="text-center">
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h3 class="panel-title">Please log in</h3>
-                          </div>
-                          <div class="panel-body">
-                              <fieldset>
-                                <div class="form-group" >
-                                  <input name="email" value="" class="form-control" placeholder="E-mail" type="text">
-                                </div>
-                                <div class="form-group" >
-                                  <input name="password" value="" class="form-control" placeholder="Password" type="password">
-                                </div>
-                                <a href="search.html">
-                                  <input id="loginsubmit" class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+                    
+                    <div
+                        style="height: 109px; width: 100%; background-color: white; text-align: center; margin-top: 0px; margin-bottom: 10px;">
+                        <p
+                            style="padding: 40px; font-size: 18px; color: black">
+                            Social: <a href="/"
+                                style="margin: 0px 15px">
+                                <i class="fa fa-facebook"></i>                                
+                                Facebook</a> <a href="./"
+                                class="text-center"
+                                style="margin: 0px 15px"><i
+                                class="fa fa-twitter"></i>Twitter</a>
+                            <a href="./" class="text-center"
+                                style="margin: 0px 15px"><i
+                                class="fa fa-github"></i>GitHub</a>
+                            <a href="./" class="text-center"
+                                style="margin: 0px 15px"><i
+                                class="fa fa-youtube"></i>Youtube</a>
+                            <a href="./" class="text-center"
+                                style="margin: 0px 15px"><i
+                                class="fa fa-envelope-o"></i>Contact
                                 </a>
-                              </fieldset>
-                          </div>
-                        </div>
-                      </h4>
-                    </div><!-- /col-9 -->
-            </div>
-                    
+                        </p>
+                    </div>
 
                 </div>
                 <!-- /main -->
+
             </div>
         </div>
     </div>
