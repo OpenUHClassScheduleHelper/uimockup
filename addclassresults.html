@@ -94,6 +94,20 @@ $('#myclassbutton1').click(function() {
 	}
 	
 });
+
+$('#myclassbutton2').click(function() {
+
+    if($('#myclassresult2').is(":visible")) {
+    $('#myclassresult2').slideUp(400, function() {
+    		//Animation Complete
+    });
+	} else {
+	$('#myclassresult2').slideDown(600, function() {
+    		//Animation Complete
+    });
+	}
+	
+});
 });
 </script>
 
@@ -272,10 +286,10 @@ $('#myclassbutton1').click(function() {
 						<p><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></p>
 					  </div>
 					  
-					  <a class="btn course-dropdown-button" id="myclassbutton1"> 
+					  <a class="btn course-dropdown-button" id="myclassbutton2"> 
 						ICS 141 Discrete Math for CS I
 					  </a>
-					  <div class="mobileresults" id="myclassresult1">
+					  <div class="mobileresults" id="myclassresult2">
 					    <p><b>CRN: </b><br>84095</p>
 						<hr></hr>
 						<p><b>Gen Ed./Focus: </b><br> </p>
