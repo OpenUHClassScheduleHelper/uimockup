@@ -37,67 +37,6 @@ $('[data-toggle=offcanvas]').click(function() {
 });
 </script>
 
-<script type='text/javascript'>
-$(document).ready(function() {
-$('#resultbutton1').click(function() {
-
-    if($('#resultinfo1').is(":visible")) {
-    $('#resultinfo1').slideUp(400, function() {
-            //Animation Complete
-    });
-    } else {
-    $('#resultinfo1').slideDown(600, function() {
-            //Animation Complete
-    });
-    }
-    
-});
-
-$('#resultbutton2').click(function() {
-
-    if($('#resultinfo2').is(":visible")) {
-    $('#resultinfo2').slideUp(400, function() {
-            //Animation Complete
-    });
-    } else {
-    $('#resultinfo2').slideDown(600, function() {
-            //Animation Complete
-    });
-    }
-    
-});
-
-$('#resultbutton3').click(function() {
-
-    if($('#resultinfo3').is(":visible")) {
-    $('#resultinfo3').slideUp(400, function() {
-            //Animation Complete
-    });
-    } else {
-    $('#resultinfo3').slideDown(600, function() {
-            //Animation Complete
-    });
-    }
-    
-});
-
-$('#myclassbutton1').click(function() {
-
-    if($('#myclassresult1').is(":visible")) {
-    $('#myclassresult1').slideUp(400, function() {
-            //Animation Complete
-    });
-    } else {
-    $('#myclassresult1').slideDown(600, function() {
-            //Animation Complete
-    });
-    }
-    
-});
-});
-</script>
-
-
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">
@@ -135,21 +74,29 @@ $('#myclassbutton1').click(function() {
           
             <!-- main right col -->
             <div class="column col-sm-10 col-xs-11" id="main">
-                <!-- top nav -->
-                <div class="navbar">  
-                    <a href="index.html"><div class="visible-xs"><img class="header_banner" src="header_banner.jpg"></div></a>
-                    <a href="index.html">
-                    <div class="hidden-xs">
-                      <img class="pull-left" width="100px" src="UH_Warriors.jpg">
-                      <p class="navbar-text">UH Class Schedule Helper</p>
-                    </div>
-                    </a>
-                </div>
-                <!-- /top nav -->
-                  <h2>My Schedule</h2>
-                  
+            
+            <!-- Header Mobile -->
+            <div class="visible-xs visible-sm">
+              <a href="index.html"><div class="header_banner"></div></a>
+            </div>
+                
+            <!-- Header Desktop/Laptop -->
+            <div class="hidden-sm hidden-xs">
+              <a href="index.html">
+                <img class="pull-left" width="100px" src="UH_Warriors.jpg">
+                <p class="navbar-text">UH Class Schedule Helper</p>
+              </a>
+            </div>
+            
+               <!-- Empty div for spacing -->
                <div class="container">
                 <div class="full col-md-12">
+                </div>
+              </div>
+                
+               <div class="container">
+                <div class="full col-md-12">
+                  <h2>My Schedule</h2>
                   <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                       <thead>
