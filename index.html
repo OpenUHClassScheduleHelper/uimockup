@@ -30,18 +30,6 @@
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   
-  <script type='text/javascript'>
-	$(document).ready(function() {   /* off-canvas sidebar toggle */
-		$('[data-toggle=offcanvas]').click(function() {
-		    $(this).toggleClass('visible-xs text-center');
-		    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
-		    $('.row-offcanvas').toggleClass('active');
-		    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
-		    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
-		    $('#btnShow').toggle();
-		});
-	});
-  </script>
   
   <script type="text/javascript">
             $(function() {
@@ -62,67 +50,13 @@
             });
         </script>
 
-  <div class="wrapper">
-        <div class="box">
-            <div class="row row-offcanvas row-offcanvas-left">
-                <!-- sidebar -->
-                <div class="column col-sm-2 col-xs-1 sidebar-offcanvas"
-                    id="sidebar">
-
-                    <ul class="nav">
-                        <li><a href="#" data-toggle="offcanvas"
-                            class="visible-xs text-center"><i
-                                class="glyphicon glyphicon-chevron-right"></i></a></li>
-                    </ul>
-
-                    <ul class="nav hidden-xs" id="lg-menu">
-                        <li class="active"><a href="search.html"><i
-                                class="glyphicon glyphicon-search"></i>
-                                Search</a></li>
-                        <li><a href="schedule.html"><i
-                                class="glyphicon glyphicon-print"></i>
-                                Print Schedule</a></li>
-                        <li><a href="WorkInProgress.html"><i
-                                class="glyphicon glyphicon-envelope"></i>
-                                Email Schedule</a></li>
-                        <li><a href="maps.html"><i
-                                class="glyphicon glyphicon-road"></i>
-                                View Map</a></li>
-                        <br>
-                        <li><a href="register.html"><i
-                                class="glyphicon glyphicon-plus"></i>
-                                Sign Up</a></li>
-                        <li><a href="login.html"><i
-                                class="glyphicon glyphicon-user"></i>
-                                Login</a></li>
-                    </ul>
-
-                    <!-- tiny only nav-->
-                    <ul class="nav visible-xs" id="xs-menu">
-                        <li><a href="search.html"
-                            class="text-center">
-                              <i class="glyphicon glyphicon-search"></i></a></li>
-                        <li><a href="schedule.html"
-                            class="text-center">
-                              <i class="glyphicon glyphicon-print"></i></a></li>
-                        <li><a href="WorkInProgress.html"
-                            class="text-center">
-                              <i class="glyphicon glyphicon-envelope"></i></a></li>
-                        <li><a href="maps.html" class="text-center">
-                             <i class="glyphicon glyphicon-road"></i></a></li>
-                        <br>
-                        <li><a href="register.html"
-                            class="text-center">
-                              <i class="glyphicon glyphicon-plus"></i></a></li>
-                        <li><a href="login.html"
-                            class="text-center">
-                              <i class="glyphicon glyphicon-user"></i></a></li>
-                    </ul>
-                </div>
-                <!-- /sidebar -->
+  <div class="">
+        <div>
+            <div>
+             
 
                 <!-- main right col -->
-                <div class="column col-sm-10 col-xs-11" id="main">
+                <div class="col-md-12">
 
                     <!-- Header Mobile -->
                     <div class="visible-xs visible-sm">
@@ -139,18 +73,6 @@
 					 
                     <!-- Search Box -->
                     <div class="onboarding-picture-block">
-                      <div class="onboarding-search-box">
-                        <form class="searchform">
-                          <input class="searchfield" type="text"
-                                 value="Begin searching for classes..."
-                                 onfocus="if (this.value == 'Search...') {this.value = '';}"
-                                 onblur="if (this.value == '') {this.value = 'Search...';}" />
-                          <a href="results.html">
-                            <input class="searchbutton"
-                                   type="button" value="Go" />
-                          </a>
-                        </form>
-                      </div>
                         <div class="intro-text">
                           Making Registration a Breeze!
                         </div>
@@ -160,6 +82,7 @@
                     <div class="container">
                       <div class="colorblock-white">
                         <div class="row">
+                        <div class="col-md-12">
                           <div class="col-md-6">
                             <div class="block-header">
                               Conveniently create a schedule
@@ -175,11 +98,11 @@
                         </div> <!-- End of row -->
                       </div> <!-- End of color block -->
                     </div> <!-- End of container -->
-                    
+                    </div>
                     <!-- Search Block -->
                     <div class="container">
-                      <div class="colorblock-silver">
-                        <div class="row">
+                      <div class="row colorblock-silver">
+                            
                           <div class="col-md-6">
                             <div class="block-header">
                               Quickly Search for classes
@@ -193,7 +116,7 @@
                           <div class="col-md-6">
                             <img class="block-image" src="search.png">
                           </div>  <!-- End of col-md-6 (Image Columns) -->
-                        </div> <!-- End of row -->
+                       
                       </div> <!-- End of color block -->
                     </div> <!-- End of container -->
                     

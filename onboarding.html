@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Open UH Schedule Helper</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+<!--  Load site-specific customizations after bootstrap. -->
+
+<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+
+<!--  Load site-specific customizations after bootstrap. -->
+<link rel="stylesheet" href="style.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+  <div class="header"></div>
+
+  <!-- Header Mobile -->
+  <div class="visible-xs">
+    <div class="header_banner">
+      <div class="login-header">
+        <a href="login.html">Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Desktop/Laptop -->
+  <div class="hidden-xs">
+    <img class="pull-left" width="100px" src="UH_Warriors.jpg">
+    <p class="navbar-text" style="color:black;">UH Class Schedule Helper</p>
+    <div class="login-header"><a href="login.html">Sign In</a></div>
+  </div>
+
+  <!-- Search Box -->
+  <div class="onboarding-picture-block">
+    <div class="intro-text">Making Registration a Breeze!</div>
+  </div>
+
+  <!-- Convenience Block -->
+
+  <div class="colorblock-white">
+    <div class="col-md-12">
+      <div class="col-md-6">
+        <div class="block-header">Conveniently create a schedule</div>
+        <div class="block-text">Use our simple but powerful search tool to find the classes you need. Add them to
+          your schedule then save it so you can come back to it later.</div>
+      </div>
+      <!-- End of col-md-6 (Text Columns) -->
+      <div class="col-md-6">
+        <img class="block-image" src="schedule.jpg">
+      </div>
+      <!-- End of col-md-6 (Image Columns) -->
+    </div>
+    <!-- End of row -->
+  </div>
+  <!-- End of color block -->
+
+
+  <!-- Search Block -->
+  <div class="colorblock-silver">
+    <div class="col-md-6">
+      <div class="block-header">Quickly search for classes</div>
+      <div class="block-text">Need a writing intensive class? Or maybe something on Tuesdays and Thursdays? Use
+        our search engine to find exactly what you need. Search by Course title, instructor, focus, day and time and
+        more!</div>
+    </div>
+    <!-- End of col-md-6 (Text Columns) -->
+    <div class="col-md-6">
+      <img class="block-image" src="search.png">
+    </div>
+    <!-- End of col-md-6 (Image Columns) -->
+  </div>
+  <!-- End of color block -->
+
+  <!-- Mobile Design Block -->
+  <div class="colorblock-white">
+    <div class="col-md-6">
+      <div class="block-header">Easy to use mobile design</div>
+      <div class="block-text">We know you're busy and always on the go. That's why we built this site with a
+        mobile first attitude. Access it from your laptop or your smartphone. It's all good!</div>
+    </div>
+    <!-- End of col-md-6 (Text Columns) -->
+    <div class="col-md-6">
+      <img class="block-image" src="smartphone.png">
+    </div>
+    <!-- End of col-md-6 (Image Columns) -->
+  </div>
+  <!-- End of color block -->
+
+  <!-- Up-To-Date Info Block -->
+  <div class="colorblock-silver">
+    <div class="col-md-6">
+      <div class="block-header">Up-To-Date Information</div>
+      <div class="block-text">There are few things in the world more frustrating than when you can't get a seat in
+        a class you need. So we've gone through great pains to keep the information on this site as up-to-date as
+        possible (especially the number of available seats).</div>
+    </div>
+    <!-- End of col-md-6 (Text Columns) -->
+    <div class="col-md-6">
+      <img class="block-image" src="refresh.png">
+    </div>
+    <!-- End of col-md-6 (Image Columns) -->
+  </div>
+  <!-- End of color block -->
+
+
+  <!-- Map Block -->
+  <div class="colorblock-white">
+    <div class="col-md-6">
+      <div class="block-header">Map your route between classes</div>
+      <div class="block-text">Don't know where your class is? Curious how far it is between classes? Click on the
+        Maps link to see a map of your schedule.</div>
+    </div>
+    <!-- End of col-md-6 (Text Columns) -->
+    <div class="col-md-6">
+      <img class="block-image" src="map.png">
+    </div>
+    <!-- End of col-md-6 (Image Columns) -->
+  </div>
+  <!-- End of color block -->
+
+
+  <!-- Testmony Block -->
+  <div class="colorblock-silver">
+    <div class="col-md-6">
+      <div class="block-header">Hear from other users</div>
+      <div class="block-text">We think we've got something great here but you don't have to take our word for it.
+        Here's what some other users have got to say.</div>
+    </div>
+    <!-- End of col-md-6 (Text Columns) -->
+    <div class="col-md-6">
+      <img class="block-image" src="testimony.png">
+    </div>
+    <!-- End of col-md-6 (Image Columns) -->
+  </div>
+  <!-- End of color block -->
+
+  <div
+    style="height: 109px; width: 100%; background-color: white; text-align: center; margin-top: 0px; margin-bottom: 10px;">
+    <p style="padding: 40px; font-size: 18px; color: black">
+      Social: <a href="/" style="margin: 0px 15px"> <i class="fa fa-facebook"></i> Facebook
+      </a> <a href="./" class="text-center" style="margin: 0px 15px"><i class="fa fa-twitter"></i>Twitter</a> <a href="./"
+        class="text-center" style="margin: 0px 15px"><i class="fa fa-github"></i>GitHub</a> <a href="./"
+        class="text-center" style="margin: 0px 15px"><i class="fa fa-youtube"></i>Youtube</a> <a href="./"
+        class="text-center" style="margin: 0px 15px"><i class="fa fa-envelope-o"></i>Contact </a>
+    </p>
+  </div>
+
+
+
+  <!-- Load Bootstrap JavaScript components. HTMLUnit (used in testing) requires JQuery 1.8.3 or below). -->
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
