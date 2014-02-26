@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .instructor-course {
   max-width: 640px;
 }
@@ -5,6 +6,16 @@
 .instructor-course div {
   max-width: 640px;
 }
+=======
+/************* Instructor-courses CSS *************/
+.instructor-course {
+  max-width: 640px;
+}
+.instructor-course div {
+  max-width: 640px;
+}
+/************* Instructor-courses End *************/
+>>>>>>> milestone-one-point-five-onboarding
 /************* Begin Maps CSS *************/
 .iframe-rwd  {
 position: relative;
