@@ -94,6 +94,49 @@ $('#myclassbutton1').click(function() {
 	}
 	
 });
+
+
+$('#classinfobutton1').click(function() {
+
+    if($('#classinfo1').is(":visible")) {
+    $('#classinfo1').slideUp(200, function() {
+    		//Animation Complete
+    });
+	} else {
+	$('#classinfo1').slideDown(200, function() {
+    		//Animation Complete
+    });
+	}
+	
+});
+
+$('#classinfobutton2').click(function() {
+
+    if($('#classinfo2').is(":visible")) {
+    $('#classinfo2').slideUp(200, function() {
+    		//Animation Complete
+    });
+	} else {
+	$('#classinfo2').slideDown(200, function() {
+    		//Animation Complete
+    });
+	}
+	
+});
+
+$('#classinfobutton3').click(function() {
+
+    if($('#classinfo3').is(":visible")) {
+    $('#classinfo3').slideUp(200, function() {
+    		//Animation Complete
+    });
+	} else {
+	$('#classinfo3').slideDown(200, function() {
+    		//Animation Complete
+    });
+	}
+	
+});
 });
 </script>
 
@@ -172,6 +215,7 @@ $('#myclassbutton1').click(function() {
 						<hr></hr>
 						<p></p>
 					  </div>
+					  
 					  <a class="btn course-dropdown-button" id="resultbutton2"> 
 						ICS 142 Discrete Math for CS I
 					  </a>
@@ -188,6 +232,7 @@ $('#myclassbutton1').click(function() {
 						<hr></hr>
 						<p><a href="addclassresults.html"><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></a></p>
 					  </div>
+					  
 					  <a class="btn course-dropdown-button" id="resultbutton3"> 
 						ICS 212 Program Structure
 					  </a>
@@ -207,8 +252,8 @@ $('#myclassbutton1').click(function() {
 					</div>
 				 
 				 
-			     <table class="result-table table-striped hidden-sm hidden-xs">
-				 <tr>
+			     <table class="result-table hidden-sm hidden-xs">
+				 <tr class="tableheader">
 				   <th>CRN</th>
 				   <th>Course</th>
 				   <th>Title</th>
@@ -221,7 +266,7 @@ $('#myclassbutton1').click(function() {
 				 </tr>
 				 
 				 <tr>
-				   <td>84935</td>
+				   <td><a id="classinfobutton1">84935</a></td>
 				   <td>ICS 111</td>
 				   <td>Intro to Computer Science I</td>
 				   <td>ICS</td>
@@ -231,8 +276,12 @@ $('#myclassbutton1').click(function() {
 				   <td>M 0530-0800p, W 0530-0645p</td>
 				 </tr>
 				 
+				 <tr class="mobileresults" id="classinfo1">
+				 <td class="classinfo" colspan="9"><p>Overview of computer science, writing programs. Pre: Recommended: computer experience. </p></td>
+				 </tr>
+				 
 				 <tr>
-				   <td>84095</td>
+				   <td><a id="classinfobutton2">84095</a></td>
 				   <td>ICS 141</td>
 				   <td>Discrete Math for CS I</td>
 				   <td>ICS</td>
@@ -243,8 +292,12 @@ $('#myclassbutton1').click(function() {
 				   <td><a href="addclassresults.html"><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></a></td>
 				 </tr>
 				 
+				 <tr class="mobileresults" id="classinfo2">
+				 <td class="classinfo" colspan="9"><p>Logic, sets, functions, matrices, algorithmic concepts, mathematical reasoning, recursion, counting techniques, probability theory.</p></td>
+				 </tr>
+				 
 				 <tr>
-				   <td>84494</td>
+				   <td><a id="classinfobutton3">84494</a></td>
 				   <td>ICS 212</td>
 				   <td>Program Structure</td>
 				   <td>ICS</td>
@@ -253,6 +306,10 @@ $('#myclassbutton1').click(function() {
 				   <td>TBA</td>
 				   <td>TBA</td>
 				   <td><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></td>
+				 </tr>
+				 
+				 <tr class="mobileresults" id="classinfo3">
+				 <td class="classinfo" colspan="9"><p>Program organization paradigms, programming environments, implementation of a module from specifications, the C and C++ programming languages. Pre: 211 or consent. </p></td>
 				 </tr>
 				 
 				 
