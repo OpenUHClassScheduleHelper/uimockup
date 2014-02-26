@@ -1,3 +1,10 @@
+.instructor-course {
+  max-width: 640px;
+}
+
+.instructor-course div {
+  max-width: 640px;
+}
 /************* Begin Maps CSS *************/
 .iframe-rwd  {
 position: relative;
