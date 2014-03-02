@@ -1,3 +1,10 @@
+/************* Schedule Table CSS *************/
+#tempCell {
+  background-color: yellow;
+  visibility: hidden;
+}
+/************* Schedule Table End *************/
+
 /************* Instructor-courses CSS *************/
 .instructor-course {
   max-width: 640px;
