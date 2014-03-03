@@ -247,6 +247,27 @@ height: 100%;
   padding-left: 0px;
   padding-right: 0px;
 }
+
+
+.social-div {
+  height: 109px; 
+  width: 100%; 
+  background-color: #CECECE; 
+  text-align: center; 
+  margin-top: 0px; 
+  margin-bottom: 10px;
+}
+
+.social-p {
+  padding: 40px; 
+  font-size: 18px; 
+  color: black;
+}
+
+.social-a {
+  margin: 0px 15px;
+}
+
 /************* End On Boarding CSS *************/
 
 /** search form css **/
