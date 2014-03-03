@@ -172,17 +172,22 @@ $('#classinfobutton3').click(function() {
 	
 });
 
-/*$("#infoicon1").ready(function() {
-    $("#infoicon1").fadeTo('slow', 0.5).fadeTo('slow', 1.0);
-});*/
 
 $("#infoicon1").bind('fade-cycle', function() {
-    $("#infoicon1").fadeTo('slow', 0.5, function() {
-        $("#infoicon1").fadeTo('slow', 1.0, function() {
+    $("#infoicon1").fadeIn('slow', function() {
+        $("#infoicon1").fadeOut('slow', function() {
             $("#infoicon1").trigger('fade-cycle');
         });
     });
 });
+
+/*$("#infoicon1").bind('fade-cycle', function() {
+    $("#infoicon1").fadeTo('slow',0.5, function() {
+        $("#infoicon1").fadeTo('slow',1.0, function() {
+            $("#infoicon1").trigger('fade-cycle');
+        });
+    });
+});*/
 
 $('.infoicon').trigger('fade-cycle');
 });
@@ -529,6 +534,7 @@ $('.infoicon').trigger('fade-cycle');
 		<h4><b>Course Summary</b></h4>
         <p>Program organization paradigms, programming environments, implementation of a module from specifications, the C and C++ programming languages. Pre: 211 or consent. </p><br>
 		<h4><b>Late Breaking Information</b></h4>
+		<p class="professor-new-info">12/10/14 Julia Patriarche: This class will be conducted as an online course.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
