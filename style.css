@@ -188,6 +188,11 @@ height: 100%;
   width: 94%;
 }
 
+.buttoncolumn {
+  padding-left:40px;
+  padding-right:20px;
+}
+
 td,th {
   text-align: center;
   padding: 5px;
@@ -247,12 +252,44 @@ margin-left: 10px;
   margin-bottom: 2px;
 }
 
+.glyphicon-plus {
+  
+  
+}
+
+.infoicon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
 .classinfo {
   text-align: left;
 }
 
+.added {
+ background-color: #BBFF99;
+ border: none;
+}
+
+.added:hover {
+  background-color: #BBFF99;
+}
+
 .tableheader {
   background-color: #eee;
+}
+
+.modal-header {
+ padding-bottom: 30px;
+}
+
+.modal-body {
+ margin-left: 10px;
+}
+
+.professor-new-info {
+  color: red;
 }
 
 .navbar-text {
