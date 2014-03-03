@@ -135,60 +135,68 @@
                     </div>
 
                     <!-- /top nav -->
-                    <!-- search form -->
-                    <form role="form" id="search_form_temp">
-                        <h1 id="search_h1_logo">Search for classes
-                        </h1>
-                        <div class="form-group">
-                            <label for="crn">Course Number</label> <input
-                                type="crn" class="form-control" id="crn"
-                                placeholder="Search by course number">
-                        </div>
-                        <div class="form-group">
-                            <label for="courseName">Course Name</label>
-                            <input type="courseName"
-                                class="form-control" id="courseName"
-                                placeholder="Search by course name (eg. ICS414)">
-                        </div>
-                        <div class="form-group">
-                            <label for="courseTitle">Course
-                                Title</label> <input type="courseTitle"
-                                class="form-control" id="courseTitle"
-                                placeholder="Search by course title">
-                        </div>
-                        <div class="form-group">
-                            <label for="instructor">Course
-                                Instructor</label> <input type="instructor"
-                                class="form-control" id="instructor"
-                                placeholder="Search by instructor">
-                        </div>
-                        <div class="form-group">
-                            <label for="day-time">Day and Time</label> <input
-                                type="day-time" class="form-control"
-                                id="day-time" placeholder="Day and Time">
-                        </div>
-                        <div class="form-group">
-                            <label for="focus-req">Focus Requirements</label><br>
-                            <label class="checkbox-inline"> <input
-                                type="checkbox" id="inlineCheckbox1"
-                                value="option1"> ETH
-                            </label> <label class="checkbox-inline"> <input
-                                type="checkbox" id="inlineCheckbox2"
-                                value="option2"> HAP
-                            </label> <label class="checkbox-inline"> <input
-                                type="checkbox" id="inlineCheckbox3"
-                                value="option3"> OC
-                            </label>
-                            <label class="checkbox-inline"> <input
-                                type="checkbox" id="inlineCheckbox4"
-                                value="option3"> WI
-                            </label>
-                        </div>
-                    </form>
+                    <!-- potentially new search bar -->
+                    <div id="revised-search">
 
-                    <a href="results.html" id="search_btn"><button
-                            type="submit" class="btn btn-success"
-                            id="search_btn_push">Search!</button></a>
+                        <form id="searchForm" method="post">
+                            <fieldset>
+
+                                <input id="s" type="text"
+                                    placeholder="Search by Course Title" /> <input
+                                    type="submit" value="Submit"
+                                    id="submitButton" />
+
+                                <div id="searchInContainer">
+                                    <!-- focus requirements -->
+                                    <label style="font-size:13px"><b>Focus</b>: </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox"
+                                        id="inlineCheckbox1"
+                                        value="option1"
+                                        style="margin-top: -0.5px">
+                                        ETH
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox"
+                                        id="inlineCheckbox1"
+                                        value="option1"
+                                        style="margin-top: -0.5px">
+                                        HAP
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox"
+                                        id="inlineCheckbox1"
+                                        value="option1"
+                                        style="margin-top: -0.5px">
+                                        OC
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox"
+                                        id="inlineCheckbox1"
+                                        value="option1"
+                                        style="margin-top: -0.5px">
+                                        WI
+                                    </label>                                    
+                                </div>
+
+                                <ul class="icons">
+                                    <li class="web"
+                                        title="Advanced Search"
+                                        data-searchType="web">Advanced
+                                        Search</li>
+                                    <li class="images" title=""
+                                        data-searchType="images"></li>
+                                    <li class="news" title=""
+                                        data-searchType="news"></li>
+                                    <li class="videos" title=""
+                                        data-searchType="video"></li>
+                                </ul>
+
+                            </fieldset>
+                        </form>
+
+
+                    </div>
 
                 </div>
                 <!-- /main -->
