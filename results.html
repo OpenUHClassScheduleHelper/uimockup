@@ -23,6 +23,40 @@
 <!-- Load Google Fonts -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
+<script type="text/javascript"><!--
+    div = {
+        show: function(elem) {
+        	var input_list = document.getElementsByName(elem);
+        	for(var i = 0; i < input_list.length; i++) {
+        	    input_list[i].style.visibility = 'hidden';
+        	}
+        },
+        hide: function(elem) {
+            var input_list = document.getElementsByName(elem);
+            for(var i = 0; i < input_list.length; i++) {
+                input_list[i].style.visibility = 'visible';
+            }
+        }
+    }
+--></script>
+
+<script type="text/javascript"><!--
+    conflict = {
+        show: function(elem) {
+            var input_list = document.getElementsByName(elem);
+            for(var i = 0; i < input_list.length; i++) {
+                input_list[i].style.backgroundColor = 'red';
+            }
+        },
+        hide: function(elem) {
+            var input_list = document.getElementsByName(elem);
+            for(var i = 0; i < input_list.length; i++) {
+                input_list[i].style.backgroundColor = 'white';
+            }
+        }
+    }
+--></script>
+
 <script type='text/javascript'>        
 $(document).ready(function() {
 /* off-canvas sidebar toggle */
@@ -213,7 +247,8 @@ $('.infoicon').trigger('fade-cycle');
 			     <h2>Results</h2>
 				 
 				 <div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="resultbutton1"> 
+					  <a class="btn course-dropdown-button" id="resultbutton1" 
+                         onMouseOut="div.show('84935')" onMouseOver="div.hide('84935')"> 
 						ICS 111 Intro to Computer Science I
 					  </a>
 					  <div class="mobileresults" id="resultinfo1">
@@ -230,7 +265,8 @@ $('.infoicon').trigger('fade-cycle');
 						<p></p>
 					  </div>
 					  
-					  <a class="btn course-dropdown-button" id="resultbutton2"> 
+					  <a class="btn course-dropdown-button" id="resultbutton2" 
+                         onMouseOut="div.show('84095')" onMouseOver="div.hide('84095')"> 
 						ICS 142 Discrete Math for CS I
 					  </a>
 					  <div class="mobileresults" id="resultinfo2">
@@ -249,7 +285,8 @@ $('.infoicon').trigger('fade-cycle');
 						</p>
 					  </div>
 					  
-					  <a class="btn course-dropdown-button" id="resultbutton3"> 
+					  <a class="btn course-dropdown-button" id="resultbutton3" 
+                         onMouseOut="conflict.hide('84494')" onMouseOver="conflict.show('84494')"> 
 						ICS 212 Program Structure
 					  </a>
 					  <div class="mobileresults" id="resultinfo3">
@@ -280,9 +317,9 @@ $('.infoicon').trigger('fade-cycle');
 				   <th>Time</th>
 				   <th></th>
 				 </tr>
-				 
-				 <tr>
-				   <td>84935</td>
+         
+				 <tr onMouseOut="div.show('84935')" onMouseOver="div.hide('84935')">
+				   <td><a id="classinfobutton1">84935</a></td>
 				   <td>ICS 111</td>
 				   <td>Intro to Computer Science I</td>
 				   <td>ICS</td>
@@ -297,8 +334,8 @@ $('.infoicon').trigger('fade-cycle');
 				 </tr>
 				 
 				 
-				 <tr>
-				   <td>84095</td>
+				 <tr onMouseOut="div.show('84095')" onMouseOver="div.hide('84095')">
+				   <td><a id="classinfobutton2">84095</a></td>
 				   <td>ICS 141</td>
 				   <td>Discrete Math for CS I</td>
 				   <td>ICS</td>
@@ -313,8 +350,8 @@ $('.infoicon').trigger('fade-cycle');
 				 </tr>
 				 
 				 
-				 <tr>
-				   <td>84494</td>
+				 <tr onMouseOut="conflict.hide('84494')" onMouseOver="conflict.show('84494')">
+				   <td><a id="classinfobutton3">84494</a></td>
 				   <td>ICS 212</td>
 				   <td>Program Structure</td>
 				   <td>ICS</td>
@@ -332,53 +369,103 @@ $('.infoicon').trigger('fade-cycle');
 				 </table>
 					
 				</div>
-				  <h2>My Courses</h2>
+				  <h2>My Schedule</h2>
 				  
-				  <div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="myclassbutton1"> 
-						ICS 111 Intro to Computer Science I
-					  </a>
-					  <div class="mobileresults" id="myclassresult1">
-					    <p><b>CRN: </b><br>84935</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Ravi Narayan</p>
-						<hr></hr>
-						<p><b>Location: </b><br>POST 127<br>POST 319</p>
-						<hr></hr>
-						<p><b>Time: </b><br>M 0530-0800p<br> W 0530-0645p</p>
-						<hr></hr>
-						<p><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></p>
-					  </div>
-					</div>
-				  
-				  
-				  <table class="my-courses-table table-striped hidden-sm hidden-xs">
-				    <tr>
-				   <th>CRN</th>
-				   <th>Course</th>
-				   <th>Title</th>
-				   <th>Department</th>
-				   <th>Gen Ed./Focus</th>
-				   <th>Instructor</th>
-				   <th>Location</th>
-				   <th>Time</th>
-				   <th></th>
-				   </tr>
-				   
-				   <tr>
-				   <td>84935</td>
-				   <td>ICS 111</td>
-				   <td>Intro to Computer Science I</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Ravi Narayan</td>
-				   <td>POST 127, POST 319</td>
-				   <td>M 0530-0800p, W 0530-0645p</td>
-				   <td><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></td>
-				   </tr>
-				  </table>
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Time</th>
+                          <th>Monday</th>
+                          <th>Tuesday</th>
+                          <th>Wednesday</th>
+                          <th>Thursday</th>
+                          <th>Friday</th>                
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>7:30-8:20</td>
+                          <td id="tempCell" name="84935">ICS111</td> <!-- Monday -->
+                          <td></td> <!-- Tuesday -->
+                          <td id="tempCell" name="84935">ICS111</td> <!-- Wednesday -->
+                          <td></td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->
+                        </tr> 
+                        <tr>
+                          <td>8:30-9:20</td>
+                          <td></td> <!-- Monday -->
+                          <td></td> <!-- Tuesday -->
+                          <td></td> <!-- Wednesday -->
+                          <td></td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->
+                        </tr>
+                        <tr>
+                          <td>9:30-10:20</td> 
+                          <td>ICS211</td> <!-- Monday -->
+                          <td></td> <!-- Tuesday -->
+                          <td>ICS211</td> <!-- Wednesday -->
+                          <td></td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->
+                        </tr>
+                        <tr>
+                          <td>10:30-11:20</td> 
+                          <td></td> <!-- Monday -->
+                          <td>ENG111</td> <!-- Tuesday -->
+                          <td></td> <!-- Wednesday -->
+                          <td>ENG111</td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->
+                        </tr>
+                        <tr>  
+                          <td>11:30-12:20</td>
+                          <td name="84494">MATH242</td> <!-- Monday -->
+                          <td></td> <!-- Tuesday -->
+                          <td name="84494">MATH242</td> <!-- Wednesday -->
+                          <td></td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->
+                        </tr>
+                        <tr>  
+                          <td>12:30-1:20</td>  
+                          <td></td> <!-- Monday -->
+                          <td></td> <!-- Tuesday -->
+                          <td></td> <!-- Wednesday -->
+                          <td></td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->
+                        </tr>
+                        <tr>  
+                          <td>1:30-2:20</td> 
+                          <td></td> <!-- Monday -->
+                          <td id="tempCell" name="84095">ICS141</td> <!-- Tuesday -->
+                          <td></td> <!-- Wednesday -->
+                          <td id="tempCell" name="84095">ICS141</td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->  
+                        </tr>
+                        <tr>  
+                          <td>2:30-3:20</td>  
+                          <td></td> <!-- Monday -->
+                          <td></td> <!-- Tuesday -->
+                          <td></td> <!-- Wednesday -->
+                          <td></td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->      
+                          </tr>
+                        <tr> 
+                          <td>3:30-4:20</td> 
+                          <td></td> <!-- Monday -->
+                          <td></td> <!-- Tuesday -->
+                          <td></td> <!-- Wednesday -->
+                          <td></td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->        
+                        </tr>
+                        <tr>  
+                          <td>4:30-5:20</td>  
+                          <td></td> <!-- Monday -->
+                          <td></td> <!-- Tuesday -->
+                          <td></td> <!-- Wednesday -->
+                          <td></td> <!-- Thursday -->
+                          <td></td> <!-- Friday -->
+                        </tr>
+                      </tbody>
+                    </table>
              
             </div>
             <!-- /main -->
