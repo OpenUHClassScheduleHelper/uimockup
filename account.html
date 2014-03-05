@@ -1,276 +1,375 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>OpenUHScheduleHelper</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<head>
+<title>OpenUHScheduleHelper</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 
-        <!--  Load site-specific customizations after bootstrap. -->
-        <link rel="stylesheet" media="screen" href="style.css">
+<!--  Load site-specific customizations after bootstrap. -->
+<link rel="stylesheet" media="screen" href="style.css">
 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->      
-        <!--[if lt IE 9]>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
             <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
             <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
         <![endif]-->
-    </head>
-    
+</head>
+
 <body>
 
-<!-- Load Bootstrap JavaScript components -->
-<!-- Load Bootstrap JavaScript components. HTMLUnit (used in testing) requires JQuery 1.8.3 or below). -->
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <!-- Load Bootstrap JavaScript components -->
+  <!-- Load Bootstrap JavaScript components. HTMLUnit (used in testing) requires JQuery 1.8.3 or below). -->
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<!-- Load Google Fonts -->
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
-
-
-<script type='text/javascript'>        
-$(document).ready(function() {
-/* off-canvas sidebar toggle */
-$('[data-toggle=offcanvas]').click(function() {
-    $(this).toggleClass('visible-xs text-center');
-    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
-    $('.row-offcanvas').toggleClass('active');
-    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
-    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
-    $('#btnShow').toggle();
- }); 
-
-});
-</script>
-
-<script type='text/javascript'>
-$(document).ready(function() {
-$('#myclassbutton1').click(function() {
-
-    if($('#myclassinfo1').is(":visible")) {
-    $('#myclassinfo1').slideUp(600, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#myclassinfo1').slideDown(900, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
-});
-</script>
+  <!-- Load Google Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
 
+  <script type='text/javascript'>
+			$(document)
+					.ready(
+							function() {
+								/* off-canvas sidebar toggle */
+								$('[data-toggle=offcanvas]')
+										.click(
+												function() {
+													$(this)
+															.toggleClass(
+																	'visible-xs text-center');
+													$(this)
+															.find('i')
+															.toggleClass(
+																	'glyphicon-chevron-right glyphicon-chevron-left');
+													$('.row-offcanvas')
+															.toggleClass(
+																	'active');
+													$('#lg-menu')
+															.toggleClass(
+																	'hidden-xs')
+															.toggleClass(
+																	'visible-xs');
+													$('#xs-menu')
+															.toggleClass(
+																	'visible-xs')
+															.toggleClass(
+																	'hidden-xs');
+													$('#btnShow').toggle();
+												});
 
-<div class="wrapper">
+							});
+		</script>
+
+  <script type='text/javascript'>
+			$(document).ready(function() {
+				$('#myclassbutton1').click(function() {
+
+					if ($('#myclassinfo1').is(":visible")) {
+						$('#myclassinfo1').slideUp(600, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#myclassinfo1').slideDown(900, function() {
+							//Animation Complete
+						});
+					}
+
+				});
+			});
+		</script>
+
+
+
+  <div class="wrapper">
     <div class="box">
-        <div class="row row-offcanvas row-offcanvas-left">
-                      
-          
-            <!-- sidebar -->
-            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-              
-                <ul class="nav">
-                    <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-                </ul>
-               
-                <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="search.html"><i class="glyphicon glyphicon-search"></i> Search</a></li>
-                    <li><a href="schedule.html"><i class="glyphicon glyphicon-print"></i> My Schedule</a></li>
-                    <li><a href="maps.html"><i class="glyphicon glyphicon-road"></i> View Map</a></li>
-                    <br>
-                    <li><a href="account.html"><i class="glyphicon glyphicon-home"></i> My Account</a></li>
-                </ul>
-              
-                <!-- tiny only nav-->
-              <ul class="nav visible-xs" id="xs-menu">
-                    <li><a href="search.html" class="text-center" title="Search"><i class="glyphicon glyphicon-search"></i></a></li>
-                    <li><a href="schedule.html" class="text-center" title="My Schedule"><i class="glyphicon glyphicon-print"></i></a></li>
-                    <li><a href="maps.html" class="text-center" title="Map"><i class="glyphicon glyphicon-road"></i></a></li>
-                    <br>
-                    <li><a href="account.html" class="text-center" title="MyAccount"><i class="glyphicon glyphicon-home"></i></a></li>
-                </ul>
-            </div>
-            <!-- /sidebar -->
-                  
-            <!-- main right col -->
-            <div class="column col-sm-10 col-xs-11" id="main">
-                <!-- top nav -->
-                <div class="navbar">  
-                    <div class="visible-sm visible-xs"><img src="header_banner.jpg"></div>
-                    <div class="hidden-sm hidden-xs">
-                      <img class="pull-left" width="100px" src="UH_Warriors.jpg">
-                      <p class="navbar-text">UH Class Schedule Helper</p>
-                    </div>
-                </div>
-                <!-- /top nav -->
-                <div>
-					<h2>Information</h2>
-					<p class="info"><b>Name: </b>John Doe</p>
-					<p class="info"><b>Standing: </b>Sophomore</p>
-					</div>
+      <div class="row row-offcanvas row-offcanvas-left">
 
-					<h2>My Courses</h2>
-					<h3>Spring 2014</h3>
-					<div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="myclassbutton1"> 
-						ICS 111 Intro to Computer Science I
-					  </a>
-					  <div class="mobileresults" id="myclassinfo1">
-					    <p><b>CRN: </b><br>84935</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Ravi Narayan</p>
-						<hr></hr>
-						<p><b>Location: </b><br>POST 127<br>POST 319</p>
-						<hr></hr>
-						<p><b>Time: </b><br>M 0530-0800p<br> W 0530-0645p</p>
-						<hr></hr>
-						<p><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></p>
-					  </div>
-					  
-					  
-					</div>
-					
-					
-					
-					
-					<table class="my-courses-table table-striped hidden-sm hidden-xs">
-					<tr>
-					<th>CRN</th>
-					<th>Course</th>
-					<th>Title</th>
-					<th>Department</th>
-					<th>Gen Ed./Focus</th>
-					<th>Instructor</th>
-					<th>Location</th>
-					  <th>Time</th>
-					  <th></th>
-					  </tr>
-									   
-					  <tr>
-					  <td>84935</td>
-					  <td>ICS 111</td>
-					  <td>Intro to Computer Science I</td>
-					  <td>ICS</td>
-					  <td></td>
-					  <td>Ravi Narayan</td>
-					  <td>POST 127, POST 319</td>
-					  <td>M 0530-0800p, W 0530-0645p</td>
-					  <td><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></td>
-					  </tr>
-				    </table>
-					
-					<h3>Fall 2013</h3>
-					<div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="myclassbutton1"> 
-						ICS 111 Intro to Computer Science I
-					  </a>
-					  <div class="mobileresults" id="myclassinfo1">
-					    <p><b>CRN: </b><br>84935</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Ravi Narayan</p>
-						<hr></hr>
-						<p><b>Location: </b><br>POST 127<br>POST 319</p>
-						<hr></hr>
-						<p><b>Time: </b><br>M 0530-0800p<br> W 0530-0645p</p>
-						<hr></hr>
-						<p><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></p>
-					  </div>
-					  
-					  
-					</div>
-					
-					
-					
-					
-					<table class="my-courses-table table-striped hidden-sm hidden-xs">
-					<tr>
-					<th>CRN</th>
-					<th>Course</th>
-					<th>Title</th>
-					<th>Department</th>
-					<th>Gen Ed./Focus</th>
-					<th>Instructor</th>
-					<th>Location</th>
-					  <th>Time</th>
-					  <th></th>
-					  </tr>
-									   
-					  <tr>
-					  <td>84935</td>
-					  <td>ICS 111</td>
-					  <td>Intro to Computer Science I</td>
-					  <td>ICS</td>
-					  <td></td>
-					  <td>Ravi Narayan</td>
-					  <td>POST 127, POST 319</td>
-					  <td>M 0530-0800p, W 0530-0645p</td>
-					  <td><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></td>
-					  </tr>
-				    </table>
-					
-					<h3>Spring 2013</h3>
-					<div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="myclassbutton1"> 
-						ICS 111 Intro to Computer Science I
-					  </a>
-					  <div class="mobileresults" id="myclassinfo1">
-					    <p><b>CRN: </b><br>84935</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Ravi Narayan</p>
-						<hr></hr>
-						<p><b>Location: </b><br>POST 127<br>POST 319</p>
-						<hr></hr>
-						<p><b>Time: </b><br>M 0530-0800p<br> W 0530-0645p</p>
-						<hr></hr>
-						<p><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></p>
-					  </div>
-					  
-					  
-					</div>
-					
-					
-					
-					
-					<table class="my-courses-table table-striped hidden-sm hidden-xs">
-					<tr>
-					<th>CRN</th>
-					<th>Course</th>
-					<th>Title</th>
-					<th>Department</th>
-					<th>Gen Ed./Focus</th>
-					<th>Instructor</th>
-					<th>Location</th>
-					  <th>Time</th>
-					  <th></th>
-					  </tr>
-									   
-					  <tr>
-					  <td>84935</td>
-					  <td>ICS 111</td>
-					  <td>Intro to Computer Science I</td>
-					  <td>ICS</td>
-					  <td></td>
-					  <td>Ravi Narayan</td>
-					  <td>POST 127, POST 319</td>
-					  <td>M 0530-0800p, W 0530-0645p</td>
-					  <td><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></td>
-					  </tr>
-				    </table>
-					
-             
-            </div>
-            <!-- /main -->
-          
+
+        <!-- sidebar -->
+        <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+
+          <ul class="nav">
+            <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i
+                class="glyphicon glyphicon-chevron-right"></i></a></li>
+          </ul>
+
+          <ul class="nav hidden-xs" id="lg-menu">
+            <li class="active"><a href="search.html"><i class="glyphicon glyphicon-search"></i> Search</a></li>
+            <li><a href="schedule.html"><i class="glyphicon glyphicon-print"></i> My Schedule</a></li>
+            <li><a href="maps.html"><i class="glyphicon glyphicon-road"></i> View Map</a></li>
+            <br>
+            <li><a href="account.html"><i class="glyphicon glyphicon-home"></i> My Account</a></li>
+          </ul>
+
+          <!-- tiny only nav-->
+          <ul class="nav visible-xs" id="xs-menu">
+            <li><a href="search.html" class="text-center" title="Search"><i class="glyphicon glyphicon-search"></i></a></li>
+            <li><a href="schedule.html" class="text-center" title="My Schedule"><i
+                class="glyphicon glyphicon-print"></i></a></li>
+            <li><a href="maps.html" class="text-center" title="Map"><i class="glyphicon glyphicon-road"></i></a></li>
+            <br>
+            <li><a href="account.html" class="text-center" title="MyAccount"><i
+                class="glyphicon glyphicon-home"></i></a></li>
+          </ul>
         </div>
-    </div>
-</div>
+        <!-- /sidebar -->
 
+        <!-- main right col -->
+        <div class="column col-sm-10 col-xs-11" id="main">
+          <!-- top nav -->
+          <div class="navbar">
+            <div class="visible-sm visible-xs">
+              <img src="header_banner.jpg">
+            </div>
+            <div class="hidden-sm hidden-xs">
+              <img class="pull-left" width="100px" src="UH_Warriors.jpg">
+              <p class="navbar-text">UH Class Schedule Helper</p>
+            </div>
+          </div>
+          <!-- /top nav -->
+          <div>
+            <h2>Information</h2>
+            <p class="info">
+              <b>Name: </b>John Doe
+            </p>
+            <p class="info">
+              <b>Standing: </b>Sophomore
+            </p>
+
+            <!-- Begin Preferences Section -->
+            <h2>Notification Preferences</h2>
+            <div class="container">
+              <form role="form">
+                <div class="row">
+                  <label class="col-md-3" style="font-size: 14px; color: #555555; margin-top: 10px;">Receive
+                    updates by email: </label>
+                  <div class="col-md-4">
+                    <select class="form-control">
+                      <option>Sign me up!</option>
+                      <option>Maybe next time.</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-md-3" style="font-size: 14px; color: #555555; margin-top: 10px;">Enter your
+                  phone number <br>to receive updates by text: </label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control" style="margin-top:15px;" placeholder="Phone Number">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Preferences Section -->
+
+            <h2>My Courses</h2>
+            <h3>Spring 2014</h3>
+            <div class="visible-sm visible-xs">
+              <a class="btn course-dropdown-button" id="myclassbutton1"> ICS 111 Intro to Computer Science I </a>
+              <div class="mobileresults" id="myclassinfo1">
+                <p>
+                  <b>CRN: </b><br>84935
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Gen Ed./Focus: </b><br>
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Instructor: </b><br>Ravi Narayan
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Location: </b><br>POST 127<br>POST 319
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Time: </b><br>M 0530-0800p<br> W 0530-0645p
+                </p>
+                <hr></hr>
+                <p>
+                  <button class="btn btn-danger btn-sm">
+                    <div class="glyphicon glyphicon-remove"></div>
+                    Remove
+                  </button>
+                </p>
+              </div>
+
+
+            </div>
+
+
+
+
+            <table class="my-courses-table table-striped hidden-sm hidden-xs">
+              <tr>
+                <th>CRN</th>
+                <th>Course</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Gen Ed./Focus</th>
+                <th>Instructor</th>
+                <th>Location</th>
+                <th>Time</th>
+                <th></th>
+              </tr>
+
+              <tr>
+                <td>84935</td>
+                <td>ICS 111</td>
+                <td>Intro to Computer Science I</td>
+                <td>ICS</td>
+                <td></td>
+                <td>Ravi Narayan</td>
+                <td>POST 127, POST 319</td>
+                <td>M 0530-0800p, W 0530-0645p</td>
+                <td><button class="btn btn-danger btn-sm">
+                    <div class="glyphicon glyphicon-remove"></div>
+                    Remove
+                  </button></td>
+              </tr>
+            </table>
+
+            <h3>Fall 2013</h3>
+            <div class="visible-sm visible-xs">
+              <a class="btn course-dropdown-button" id="myclassbutton1"> ICS 111 Intro to Computer Science I </a>
+              <div class="mobileresults" id="myclassinfo1">
+                <p>
+                  <b>CRN: </b><br>84935
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Gen Ed./Focus: </b><br>
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Instructor: </b><br>Ravi Narayan
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Location: </b><br>POST 127<br>POST 319
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Time: </b><br>M 0530-0800p<br> W 0530-0645p
+                </p>
+                <hr></hr>
+                <p>
+                  <button class="btn btn-danger btn-sm">
+                    <div class="glyphicon glyphicon-remove"></div>
+                    Remove
+                  </button>
+                </p>
+              </div>
+
+
+            </div>
+
+
+
+
+            <table class="my-courses-table table-striped hidden-sm hidden-xs">
+              <tr>
+                <th>CRN</th>
+                <th>Course</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Gen Ed./Focus</th>
+                <th>Instructor</th>
+                <th>Location</th>
+                <th>Time</th>
+                <th></th>
+              </tr>
+
+              <tr>
+                <td>84935</td>
+                <td>ICS 111</td>
+                <td>Intro to Computer Science I</td>
+                <td>ICS</td>
+                <td></td>
+                <td>Ravi Narayan</td>
+                <td>POST 127, POST 319</td>
+                <td>M 0530-0800p, W 0530-0645p</td>
+                <td><button class="btn btn-danger btn-sm">
+                    <div class="glyphicon glyphicon-remove"></div>
+                    Remove
+                  </button></td>
+              </tr>
+            </table>
+
+            <h3>Spring 2013</h3>
+            <div class="visible-sm visible-xs">
+              <a class="btn course-dropdown-button" id="myclassbutton1"> ICS 111 Intro to Computer Science I </a>
+              <div class="mobileresults" id="myclassinfo1">
+                <p>
+                  <b>CRN: </b><br>84935
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Gen Ed./Focus: </b><br>
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Instructor: </b><br>Ravi Narayan
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Location: </b><br>POST 127<br>POST 319
+                </p>
+                <hr></hr>
+                <p>
+                  <b>Time: </b><br>M 0530-0800p<br> W 0530-0645p
+                </p>
+                <hr></hr>
+                <p>
+                  <button class="btn btn-danger btn-sm">
+                    <div class="glyphicon glyphicon-remove"></div>
+                    Remove
+                  </button>
+                </p>
+              </div>
+
+
+            </div>
+
+
+
+
+            <table class="my-courses-table table-striped hidden-sm hidden-xs">
+              <tr>
+                <th>CRN</th>
+                <th>Course</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Gen Ed./Focus</th>
+                <th>Instructor</th>
+                <th>Location</th>
+                <th>Time</th>
+                <th></th>
+              </tr>
+
+              <tr>
+                <td>84935</td>
+                <td>ICS 111</td>
+                <td>Intro to Computer Science I</td>
+                <td>ICS</td>
+                <td></td>
+                <td>Ravi Narayan</td>
+                <td>POST 127, POST 319</td>
+                <td>M 0530-0800p, W 0530-0645p</td>
+                <td><button class="btn btn-danger btn-sm">
+                    <div class="glyphicon glyphicon-remove"></div>
+                    Remove
+                  </button></td>
+              </tr>
+            </table>
+
+
+          </div>
+          <!-- /main -->
+
+        </div>
+      </div>
+    </div>
 </body>
 
 
