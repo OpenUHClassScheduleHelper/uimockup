@@ -45,14 +45,18 @@
         show: function(elem) {
             var input_list = document.getElementsByName(elem);
             for(var i = 0; i < input_list.length; i++) {
-                input_list[i].style.backgroundColor = 'red';
+                input_list[i].style.backgroundColor = '#F58E9D';
             }
+            document.getElementById('conflict-alert').style.display='table-row';
+            //document.getElementById("conflict-alert").style.visibility='visible';
         },
         hide: function(elem) {
             var input_list = document.getElementsByName(elem);
             for(var i = 0; i < input_list.length; i++) {
                 input_list[i].style.backgroundColor = 'white';
             }
+            document.getElementById("conflict-alert").style.display="none";
+            //document.getElementById("conflict-alert").style.visibility='hidden';
         }
     }
 --></script>
@@ -322,7 +326,7 @@ $('.infoicon').trigger('fade-cycle');
 				   <th>Time</th>
 				   <th></th>
 				 </tr>
-         
+                
 				 <tr onMouseOut="div.show('84935')" onMouseOver="div.hide('84935')">
 				   <td><a id="classinfobutton1">84935</a></td>
 				   <td>ICS 111</td>
@@ -331,7 +335,7 @@ $('.infoicon').trigger('fade-cycle');
 				   <td></td>
 				   <td>Ravi Narayan</td>
 				   <td>POST 127, POST 319</td>
-				   <td>MM 0730-0820a</td>
+				   <td>MW 0730-0820a</td>
 				   <td class="buttoncolumn">
 				   <button class="btn btn-success btn-sm added" title="Already Added"><div class="glyphicon glyphicon-plus" title="Already Added"></div></button>
 				   <img class="infoicon" id="infoicon1" src="more_information_icon.jpg" data-toggle="modal" data-target="#infomodal1" title="Late Breaking News"></img> 
@@ -376,9 +380,12 @@ $('.infoicon').trigger('fade-cycle');
 				</div>
 				  <h2>My Schedule</h2>
 				  
-                  <div class="table-responsive">
+                  <div class="table-responsive" style="margin-left:10px;margin-right:10px;">
                     <table class="table table-bordered table-striped">
                       <thead>
+                        <tr id="conflict-alert" style="display:none; background-color:#F58E9D;"><td colspan="6">
+                            Conflict Exists
+                        </td></tr>
                         <tr>
                           <th>Time</th>
                           <th>Monday</th>
@@ -388,6 +395,7 @@ $('.infoicon').trigger('fade-cycle');
                           <th>Friday</th>                
                         </tr>
                       </thead>
+                      
                       <tbody>
                         <tr>
                           <td>7:30-8:20</td>
