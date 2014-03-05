@@ -154,7 +154,60 @@ $('#myclassbutton1').click(function() {
     
                 <!-- /top nav -->
 				  <h2>My Courses</h2>
+				  <!-- desktop/laptop view -->
+				  <div class="ins-course hidden-xs">
+				  			<table >
+				<tr> 
+					<td>
+						ICS 111 Intro to Computer Science I
+					</td>
+					<td >
+						ICS 141 Discrete Math for CS I
+					</td>
+					<td>
+						ICS 212 Program Structure
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b>CRN: 84935</b>
+					</td>
+					<td>
+						<b>CRN: 84095</b>
+					</td>
+					<td>
+						<b>CRN: 84494</b>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<textarea>Insert course description here.</textarea>
+					</td>
+					<td>
+						<textarea>Insert course description here.</textarea>
+					</td>
+					<td>
+						<textarea>Insert course description here.</textarea>
+					</td>
+				</tr>
+				<tr>
+				  <td>
+				    <button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-saved"></div> Save changes</button>
+			      </td>
+				  <td>
+				    <button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-saved"></div> Save changes</button>
+			      </td>
+				  <td>
+				    <button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-saved"></div> Save changes</button>
+			      </td>
 				  
+				</tr>
+			</table>
+			</div>
+
+				  
+				  <!-- mobile view -->
+				  <div class="visible-xs">
 				  <div class="instructor-course">
 					  <a class="btn course-dropdown-button" id="resultbutton1"> 
 						ICS 111 Intro to Computer Science I
@@ -199,6 +252,7 @@ $('#myclassbutton1').click(function() {
                     </div>
                   
                  </div>
+				 </div>
             <!-- /main -->
           
         </div>

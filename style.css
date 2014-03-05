@@ -1,3 +1,100 @@
+/** advanced search **/
+#advancedSearch {
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+#advancedSearch a {
+  color: #fff;
+  font-family: Ubuntu;
+}
+
+/** instructor tables **/
+.ins-course {
+	margin:7px;padding:0px;
+	width:97%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #000000;
+	-moz-border-radius-bottomleft:9px;
+	-webkit-border-bottom-left-radius:9px;
+	border-bottom-left-radius:9px;
+	-moz-border-radius-bottomright:9px;
+	-webkit-border-bottom-right-radius:9px;
+	border-bottom-right-radius:9px;
+	-moz-border-radius-topright:9px;
+	-webkit-border-top-right-radius:9px;
+	border-top-right-radius:9px;
+	-moz-border-radius-topleft:9px;
+	-webkit-border-top-left-radius:9px;
+	border-top-left-radius:9px;
+}.ins-course table{
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.ins-course tr:last-child td:last-child {
+	-moz-border-radius-bottomright:9px;
+	-webkit-border-bottom-right-radius:9px;
+	border-bottom-right-radius:9px;
+}.ins-course table tr:first-child td:first-child {
+	-moz-border-radius-topleft:9px;
+	-webkit-border-top-left-radius:9px;
+	border-top-left-radius:9px;
+}.ins-course table tr:first-child td:last-child {
+	-moz-border-radius-topright:9px;
+	-webkit-border-top-right-radius:9px;
+	border-top-right-radius:9px;
+}.ins-course tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:9px;
+	-webkit-border-bottom-left-radius:9px;
+	border-bottom-left-radius:9px;
+}.ins-course tr:hover td{
+	background-color:#fefefe;
+	background:-o-linear-gradient(bottom, #fefefe 5%, #fefefe 100%);	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fefefe), color-stop(1, #fefefe) );
+	background:-moz-linear-gradient( center top, #fefefe 5%, #fefefe 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#fefefe", endColorstr="#fefefe");	background: -o-linear-gradient(top,#fefefe,fefefe);
+}.ins-course tr:first-child td{
+	background:-o-linear-gradient(bottom, #005837 5%, #007000 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005837), color-stop(1, #007000) );
+	background:-moz-linear-gradient( center top, #005837 5%, #007000 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005837", endColorstr="#007000");	background: -o-linear-gradient(top,#005837,007000);
+	background-color:#005837;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:18px;
+	font-family:lato;
+	font-weight:bold;
+	color:#ffffff;
+}.ins-course tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #005837 5%, #007000 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005837), color-stop(1, #007000) );
+	background:-moz-linear-gradient( center top, #005837 5%, #007000 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005837", endColorstr="#007000");	background: -o-linear-gradient(top,#005837,00700);
+	background-color:#005837;
+}.ins-course tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}.ins-course tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}.ins-course td{
+	background:-o-linear-gradient(bottom, #fefefe 5%, #fefefe 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fefefe), color-stop(1, #fefefe) ); 
+	background:-moz-linear-gradient( center top, #fefefe 5%, #fefefe 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#fefefe", endColorstr="#fefefe");	background: -o-linear-gradient(top,#fefefe,fefefe);
+	background-color:#fefefe;
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:14px;
+	font-family:lato;
+	font-weight:bold;
+	color:#000000;
+	text-align: center;
+}.ins-course tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.ins-course tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.ins-course tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+
 /** new search form stuff **/
 #revised-search {
     font-size:13px;
@@ -116,10 +213,6 @@ span.arrow{
 #submitButton:hover{
     background-position:left bottom;
 }
-
-
-/* The Search tutorialzine.com / Search the Web radio buttons */
-
 
 #searchInContainer{
     float:left;
