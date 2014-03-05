@@ -106,8 +106,8 @@
 }
 #searchForm{
     /* The search form. */
-    background-color:#005837;
-    padding:50px 50px 30px;
+	background-color:#005837;
+	padding:50px 50px 30px;
     margin:0px;
     position:relative;
 
@@ -133,8 +133,8 @@ fieldset{
     /* The search text box. */
     
     border:none;
+	/*background:url("searchBox.png") no-repeat;*/
     color:#888888;
-    background:url("searchBox.png") no-repeat;
     
     float:left;
     font-family:Arial,Helvetica,sans-serif;
@@ -200,10 +200,10 @@ span.arrow{
 
 
 #submitButton{
-    background:url('buttons.png') no-repeat;
+    /*background:url('buttons.png') no-repeat;*/
     width:83px;
     height:36px;
-    text-indent:-9999px;
+    /*text-indent:-9999px;*/
     overflow:hidden;
     text-transform:uppercase;
     border:none;
