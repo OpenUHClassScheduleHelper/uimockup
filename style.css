@@ -146,7 +146,7 @@ input[type=radio]{
 
 /************* Schedule Table CSS *************/
 #tempCell {
-  background-color: yellow;
+  background-color: #BBFF99;
   visibility: hidden;
 }
 /************* Schedule Table End *************/
@@ -230,7 +230,9 @@ height: 100%;
 }
 
 .colorblock-silver {
-  background: #CECECE;
+  background-image: url('gradient.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 300px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -252,7 +254,7 @@ height: 100%;
 .social-div {
   height: 109px; 
   width: 100%; 
-  background-color: #CECECE; 
+  background-color: white; /*#CECECE (gray)*/
   text-align: center; 
   margin-top: 0px; 
   margin-bottom: 10px;
@@ -781,3 +783,25 @@ small.text-muted {
     padding-left: 3px;
   }
 }
+/***** Start of split-cell, specific styles. *****/
+.white-green {
+  background: url('white-green.jpg');
+  background-repeat:repeat-x;
+}
+.green-white {
+  background: url('green-white.jpg');
+  background-repeat:repeat-x;
+}
+.white-red {
+  background: url('white-red.jpg');
+  background-repeat:repeat-x;
+}
+.red-white {
+  background: url('red-white.jpg');
+  background-repeat:repeat-x;
+}
+
+.conflict {
+  background-color: #F58E9D;
+}
+/***** End of split-cell, specific styles. *****/
