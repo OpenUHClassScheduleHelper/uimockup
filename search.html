@@ -138,17 +138,14 @@
                     <!-- potentially new search bar -->
                     <div id="revised-search">
 
-                        <form id="searchForm">
+                        <form id="searchForm" method="post" action="results.html">
                             <fieldset>
 
                                 <input id="s" type="text"
-                                    placeholder="Search by Course Title" /> 
-                                    
-                               <a href="results.html" ><button type="button" class="btn btn-default">Submit</button></a>
-<<<<<<< HEAD
+                                    placeholder="Search by Course Title" /> <input
+                                    type="submit" value="Submit"
+                                    id="submitButton" />
 
-=======
->>>>>>> 7f0e986aad57cfc56173e8b68a2e9e4b6f28fe0c
                                 <div id="searchInContainer">
                                     <!-- focus requirements -->
                                     <label style="font-size:13px"><b>Focus</b>: </label>
@@ -209,11 +206,84 @@
         <h4 class="modal-title" id="myModalLabel">Advanced Search</h4>
       </div>
       <div class="modal-body">
-        TODO: Advanced search options here
-      </div>
+        <select class="form-control" placeholder="Department">
+		  <option>Select your Department</option>
+		  <option>Academy for Creative Media (ACM)</option>
+		  <option>Accounting (ACC)</option>
+		  <option>Aerospace Studies (AS)</option>
+		  <option>...</option>
+		  <option>Information & Computer Science (ICS)</option>
+		</select>
+		<br>
+        <select class="form-control" placeholder="Course Title">
+		  <option>Course Title</option>
+		  <option>Intro to CS I (ICS 111)</option>
+		  <option>Discrete Math for CS I (ICS 141)</option>
+		  <option>Intro to CS II (ICS 211)</option>
+		  <option>...</option>
+		  <option>Topcs in Software (ICS 691)</option>
+		</select>
+		<br>
+		<label><b>Preferred Days</b></label>
+		<br>
+		<select multiple class="form-control">
+		  <option>Select all available days</option>
+		  <option>Monday</option>
+		  <option>Tuesday</option>
+		  <option>Wednesday</option>
+		  <option>Thursday</option>
+		  <option>Friday</option>
+		  <option>Saturday</option>
+		  <option>Sunday</option>
+		</select>
+		<br>
+		<label><b>Preferred Time</b></label>
+		<br>
+		<select multiple class="form-control">
+		  <option>Select all available times</option>
+		  <option>0900-1015a</option>
+		  <option>1030-1145a</option>
+		  <option>0130-0245p</option>
+		  <option>...</option>
+		  <option>0545-0845p</option>
+		</select>
+		<br>
+		
+                                    <label style="margin-right:2px;"><b>Focus</b>: </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox"
+                                        id="inlineCheckbox1"
+                                        value="option1"
+                                        style="">
+                                        ETH
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox"
+                                        id="inlineCheckbox1"
+                                        value="option1"
+                                        style="">
+                                        HAP
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox"
+                                        id="inlineCheckbox1"
+                                        value="option1"
+                                        style="">
+                                        OC
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox"
+                                        id="inlineCheckbox1"
+                                        value="option1"
+                                        style="">
+                                        WI
+                                    </label>
+									<br>
+		</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+		<!-- both buttons close modal for now -->
+        <button type="button" class="btn btn-success" data-dismiss="modal">Search</button> 
       </div>
     </div>
   </div>
