@@ -26,17 +26,35 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
   <script type="text/javascript">
-			div = {
-				expand : function(elem) {
-					document.getElementById(elem).setAttribute("class",
-							"expanded-div");
+			cmt = {
+				show1 : function() {
+				    // show textarea
+				    document.getElementById("cmt1").style.display = 'table-row';
+				    // show save button 
+                    document.getElementById("save1").style.display = 'inherit';
+				    // hide edit button
+                    document.getElementById("edit1").style.display = 'none';
 				},
-				collapse : function(elem) {
-					document.getElementById(elem).setAttribute("class",
-							"collapsed-div");
+				hide1: function() {
+					document.getElementById("cmt1").style.display = 'none';
+					document.getElementById("save1").style.display = 'none';
+                    document.getElementById("edit1").style.display = 'inherit';
+				},
+				show2: function() {
+                    document.getElementById("cmt2").style.display = 'table-row';
+                    // show save button 
+                    document.getElementById("save2").style.display = 'inherit';
+                    // hide edit button
+                    document.getElementById("edit2").style.display = 'none';
+				},
+				hide2: function() {
+                    document.getElementById("cmt2").style.display = 'none';
+                    document.getElementById("save2").style.display = 'none';
+                    document.getElementById("edit2").style.display = 'inherit';
 				}
 			}
-		</script>
+</script>
+
 
   <script>
 			$('#myTab a').click(function(e) {
@@ -436,7 +454,8 @@
                     <td><button class="btn btn-danger btn-sm">
                         <div class="glyphicon glyphicon-remove"></div>
                         Remove
-                      </button></td>
+                      </button>
+                    </td>
                   </tr>
                   <tr>
                     <td>88611</td>
@@ -486,21 +505,54 @@
                     <td>ICS111</td>
                     <td>Tough class but you sure do learn a lot!</td>
                     <td></td>
-                    <td><button type="button" class="btn btn-primary btn-xs" onclick="div.adjust('cmt1')">Edit</button></td>
+                    <td>
+                      <button id="edit1"
+                              type="button" 
+                              class="btn btn-primary btn-xs" 
+                              onclick="cmt.show1()">Edit
+                      </button>
+                      <button id="save1"
+                              type="button" 
+                              style="display:none;"
+                              class="btn btn-success btn-xs" 
+                              onclick="cmt.hide1()">Save
+                      </button>
+                    </td>
                     <td><button type="button" class="btn btn-danger btn-xs" data-toggle="modal"
                         data-target="#myModal">Delete</button></td>
                   </tr>
-                  <tr>
-                    <td id="cmt1"></td>
+                  <tr id="cmt1" style="display:none;">
+                    <td colspan="6">
+                      <textarea class="form-control" rows="3">Tough class but you sure do learn a lot!
+                      </textarea>
+                    </td>
                   </tr>
                   <tr>
                     <td>9/12/13</td>
                     <td>ICS311</td>
                     <td>I thought ICS111 was hard...this class is impossible!</td>
                     <td></td>
-                    <td><button type="button" class="btn btn-primary btn-xs">Edit</button></td>
+                    <td>
+                      <button id="edit2"
+                              type="button" 
+                              class="btn btn-primary btn-xs" 
+                              onclick="cmt.show2()">Edit
+                      </button>
+                      <button id="save2"
+                              type="button" 
+                              style="display:none;"
+                              class="btn btn-success btn-xs" 
+                              onclick="cmt.hide2()">Save
+                      </button>
+                    </td>
                     <td><button type="button" class="btn btn-danger btn-xs" data-toggle="modal"
                         data-target="#myModal">Delete</button></td>
+                  </tr>
+                  <tr id="cmt2" style="display:none;">
+                    <td colspan="6">
+                      <textarea class="form-control" rows="3">I thought ICS111 was hard...this class is impossible!
+                      </textarea>
+                    </td>
                   </tr>
                 </table>
               

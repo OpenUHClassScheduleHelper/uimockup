@@ -264,7 +264,7 @@ input[type=radio]{
 }
 .collapsed-div {
   display:block;
-  height:auto;
+  height:0;
 }
 
 /**********************************************/
