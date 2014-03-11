@@ -16,189 +16,222 @@
 </head>
 <body>
 
-<!-- Load Bootstrap JavaScript components -->
-<script src="http://code.jquery.com/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<!-- Load Google Fonts -->
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
+  <!-- Load Google Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
-<script type='text/javascript'>        
-$(document).ready(function() {
-/* off-canvas sidebar toggle */
-$('[data-toggle=offcanvas]').click(function() {
-    $(this).toggleClass('visible-xs text-center');
-    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
-    $('.row-offcanvas').toggleClass('active');
-    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
-    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
-    $('#btnShow').toggle();
- });       
-});
-</script>
+  <script type='text/javascript'>
+			$(document)
+					.ready(
+							function() {
+								/* off-canvas sidebar toggle */
+								$('[data-toggle=offcanvas]')
+										.click(
+												function() {
+													$(this)
+															.toggleClass(
+																	'visible-xs text-center');
+													$(this)
+															.find('i')
+															.toggleClass(
+																	'glyphicon-chevron-right glyphicon-chevron-left');
+													$('.row-offcanvas')
+															.toggleClass(
+																	'active');
+													$('#lg-menu')
+															.toggleClass(
+																	'hidden-xs')
+															.toggleClass(
+																	'visible-xs');
+													$('#xs-menu')
+															.toggleClass(
+																	'visible-xs')
+															.toggleClass(
+																	'hidden-xs');
+													$('#btnShow').toggle();
+												});
+							});
+		</script>
 
-<div class="wrapper">
-    <div class="box">
-        <div class="row row-offcanvas row-offcanvas-left">
-                      
-          
-            <!-- sidebar -->
-            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-              
-                <ul class="nav">
-                    <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-                </ul>
-               
-                <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="search.html"><i class="glyphicon glyphicon-search"></i> Search</a></li>
-                    <li><a href="schedule.html"><i class="glyphicon glyphicon-print"></i> My Schedule</a></li>
-                    <li><a href="maps.html"><i class="glyphicon glyphicon-road"></i> View Map</a></li>
-                    <br>
-                    <li><a href="account.html"><i class="glyphicon glyphicon-home"></i> My Account</a></li>
-                </ul>
-              
-                <!-- tiny only nav-->
-              <ul class="nav visible-xs" id="xs-menu">
-                    <li><a href="search.html" class="text-center" title="Search"><i class="glyphicon glyphicon-search"></i></a></li>
-                    <li><a href="schedule.html" class="text-center" title="Print"><i class="glyphicon glyphicon-print"></i></a></li>
-                    <li><a href="maps.html" class="text-center" title="Map"><i class="glyphicon glyphicon-road"></i></a></li>
-                    <br>
-                    <li><a href="account.html" class="text-center" title="MyAccount"><i class="glyphicon glyphicon-home"></i></a></li>
-                </ul>
-            </div>
-            <!-- /sidebar -->
-          
-            <!-- main right col -->
-            <div class="column col-sm-10 col-xs-11" id="main">
-            
-            <!-- Header Mobile -->
-            <div class="visible-xs visible-sm">
-              <a href="index.html"><div class="header_banner"></div></a>
-            </div>
-                
-            <!-- Header Desktop/Laptop -->
-            <div class="hidden-sm hidden-xs">
-              <a href="index.html">
-                <img class="pull-left" width="100px" src="UH_Warriors.jpg">
-                <p class="navbar-text">UH Class Schedule Helper</p>
-              </a>
-            </div>
-            
-               <!-- Empty div for spacing -->
-               <div class="container">
-                <div class="full col-md-12">
-                </div>
-              </div>
-                
-               <div class="container">
-                <div class="full col-md-12">
-                  <h2>My Schedule</h2>
-                  <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>Time</th>
-                          <th>Monday</th>
-                          <th>Tuesday</th>
-                          <th>Wednesday</th>
-                          <th>Thursday</th>
-                          <th>Friday</th>                
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>7:30-8:20</td>
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr> 
-                        <tr>
-                          <td>8:30-9:20</td>
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>
-                          <td>9:30-10:20</td> 
-                          <td>ICS111</td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td>ICS111</td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>
-                          <td>10:30-11:20</td> 
-                          <td></td> <!-- Monday -->
-                          <td>ENG111</td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td>ENG111</td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>  
-                          <td>11:30-12:20</td>
-                          <td>MATH242</td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td>MATH242</td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>  
-                          <td>12:30-1:20</td>  
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td>ICS141</td> <!-- Friday -->
-                        </tr>
-                        <tr>  
-                          <td>1:30-2:20</td> 
-                          <td></td> <!-- Monday -->
-                          <td>ICS141</td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td>ICS141</td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->  
-                        </tr>
-                        <tr>  
-                          <td>2:30-3:20</td>  
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->      
-                          </tr>
-                        <tr> 
-                          <td>3:30-4:20</td> 
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->        
-                        </tr>
-                        <tr>  
-                          <td>4:30-5:20</td>  
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>    
-                </div>
-               </div> <!-- End of container -->
-            </div>
-
-            <!-- /main -->
-          
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <!--  Display three horizontal lines when navbar collapsed. -->
+            <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"></a>
         </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" style="color: black;">Search</a></li>
+            <li><a href="maps.html" style="color: white;">View Map</a></li>
+            <li><a href="account.html" style="color: white;">My Account</a></li>
+            <li><a href="index.html" style="color: white;">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 
-</div>
+
+  <div class="container">
+    <div class="full col-md-12">
+      <h2>My Schedule</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>7:30-8:20</td>
+              <td></td>
+              <!-- Monday -->
+              <td></td>
+              <!-- Tuesday -->
+              <td></td>
+              <!-- Wednesday -->
+              <td></td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>8:30-9:20</td>
+              <td></td>
+              <!-- Monday -->
+              <td></td>
+              <!-- Tuesday -->
+              <td></td>
+              <!-- Wednesday -->
+              <td></td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>9:30-10:20</td>
+              <td>ICS111</td>
+              <!-- Monday -->
+              <td></td>
+              <!-- Tuesday -->
+              <td>ICS111</td>
+              <!-- Wednesday -->
+              <td></td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>10:30-11:20</td>
+              <td></td>
+              <!-- Monday -->
+              <td>ENG111</td>
+              <!-- Tuesday -->
+              <td></td>
+              <!-- Wednesday -->
+              <td>ENG111</td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>11:30-12:20</td>
+              <td>MATH242</td>
+              <!-- Monday -->
+              <td></td>
+              <!-- Tuesday -->
+              <td>MATH242</td>
+              <!-- Wednesday -->
+              <td></td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>12:30-1:20</td>
+              <td></td>
+              <!-- Monday -->
+              <td></td>
+              <!-- Tuesday -->
+              <td></td>
+              <!-- Wednesday -->
+              <td></td>
+              <!-- Thursday -->
+              <td>ICS141</td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>1:30-2:20</td>
+              <td></td>
+              <!-- Monday -->
+              <td>ICS141</td>
+              <!-- Tuesday -->
+              <td></td>
+              <!-- Wednesday -->
+              <td>ICS141</td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>2:30-3:20</td>
+              <td></td>
+              <!-- Monday -->
+              <td></td>
+              <!-- Tuesday -->
+              <td></td>
+              <!-- Wednesday -->
+              <td></td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>3:30-4:20</td>
+              <td></td>
+              <!-- Monday -->
+              <td></td>
+              <!-- Tuesday -->
+              <td></td>
+              <!-- Wednesday -->
+              <td></td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+            <tr>
+              <td>4:30-5:20</td>
+              <td></td>
+              <!-- Monday -->
+              <td></td>
+              <!-- Tuesday -->
+              <td></td>
+              <!-- Wednesday -->
+              <td></td>
+              <!-- Thursday -->
+              <td></td>
+              <!-- Friday -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- End of container -->
+
 
 </body>
 </html>
