@@ -16,336 +16,398 @@
 </head>
 <body>
 
-<!-- Load Bootstrap JavaScript components -->
-<script src="http://code.jquery.com/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<!-- Load Google Fonts -->
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
+  <!-- Load Google Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
-<script type='text/javascript'>        
-$(document).ready(function() {
-/* off-canvas sidebar toggle */
-$('[data-toggle=offcanvas]').click(function() {
-    $(this).toggleClass('visible-xs text-center');
-    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
-    $('.row-offcanvas').toggleClass('active');
-    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
-    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
-    $('#btnShow').toggle();
- });       
-});
-</script>
+  <script type='text/javascript'>
+			$(document)
+					.ready(
+							function() {
+								/* off-canvas sidebar toggle */
+								$('[data-toggle=offcanvas]')
+										.click(
+												function() {
+													$(this)
+															.toggleClass(
+																	'visible-xs text-center');
+													$(this)
+															.find('i')
+															.toggleClass(
+																	'glyphicon-chevron-right glyphicon-chevron-left');
+													$('.row-offcanvas')
+															.toggleClass(
+																	'active');
+													$('#lg-menu')
+															.toggleClass(
+																	'hidden-xs')
+															.toggleClass(
+																	'visible-xs');
+													$('#xs-menu')
+															.toggleClass(
+																	'visible-xs')
+															.toggleClass(
+																	'hidden-xs');
+													$('#btnShow').toggle();
+												});
+							});
+		</script>
 
-<script type='text/javascript'>
-$(document).ready(function() {
-$('#resultbutton1').click(function() {
+  <script type='text/javascript'>
+			$(document).ready(function() {
+				$('#resultbutton1').click(function() {
 
-    if($('#resultinfo1').is(":visible")) {
-    $('#resultinfo1').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#resultinfo1').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+					if ($('#resultinfo1').is(":visible")) {
+						$('#resultinfo1').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#resultinfo1').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
 
-$('#resultbutton2').click(function() {
+				});
 
-    if($('#resultinfo2').is(":visible")) {
-    $('#resultinfo2').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#resultinfo2').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+				$('#resultbutton2').click(function() {
 
-$('#resultbutton3').click(function() {
+					if ($('#resultinfo2').is(":visible")) {
+						$('#resultinfo2').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#resultinfo2').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
 
-    if($('#resultinfo3').is(":visible")) {
-    $('#resultinfo3').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#resultinfo3').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+				});
 
-$('#myclassbutton1').click(function() {
+				$('#resultbutton3').click(function() {
 
-    if($('#myclassresult1').is(":visible")) {
-    $('#myclassresult1').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#myclassresult1').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+					if ($('#resultinfo3').is(":visible")) {
+						$('#resultinfo3').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#resultinfo3').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
 
-$('#myclassbutton2').click(function() {
+				});
 
-    if($('#myclassresult2').is(":visible")) {
-    $('#myclassresult2').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#myclassresult2').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
-});
-</script>
+				$('#myclassbutton1').click(function() {
 
+					if ($('#myclassresult1').is(":visible")) {
+						$('#myclassresult1').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#myclassresult1').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
 
-<div class="wrapper">
-    <div class="box">
-        <div class="row row-offcanvas row-offcanvas-left">
-                      
-          
-            <!-- sidebar -->
-            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-              
-                <ul class="nav">
-                    <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-                </ul>
-               
-                <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="search.html"><i class="glyphicon glyphicon-search"></i> Search</a></li>
-                    <li><a href="schedule.html"><i class="glyphicon glyphicon-print"></i> My Schedule</a></li>
-                    <li><a href="maps.html"><i class="glyphicon glyphicon-road"></i> View Map</a></li>
-                    <br>
-                    <li><a href="account.html"><i class="glyphicon glyphicon-home"></i> My Account</a></li>
-                </ul>
-              
-                <!-- tiny only nav-->
-              <ul class="nav visible-xs" id="xs-menu">
-                    <li><a href="search.html" class="text-center" title="Search"><i class="glyphicon glyphicon-search"></i></a></li>
-                    <li><a href="schedule.html" class="text-center" title="Print"><i class="glyphicon glyphicon-print"></i></a></li>
-                    <li><a href="maps.html" class="text-center" title="Map"><i class="glyphicon glyphicon-road"></i></a></li>
-                    <br>
-                    <li><a href="account.html" class="text-center" title="My Account"><i class="glyphicon glyphicon-home"></i></a></li>
-                </ul>
-            </div>
-            <!-- /sidebar -->
-          
-            <!-- main right col -->
-            <div class="column col-sm-10 col-xs-11" id="main">
-                <!-- top nav -->
-                <div class="navbar">  
-                    <a href="index.html"><div class="visible-xs"><img class="header_banner" src="header_banner.jpg"></div></a>
-					<a href="index.html">
-                    <div class="hidden-xs">
-                      <img class="pull-left" width="100px" src="UH_Warriors.jpg">
-                      <p class="navbar-text">UH Class Schedule Helper</p>
-                    </div>
-					</a>
-                </div>
-                <!-- /top nav -->
-               <div> 
-			     <h2>Results</h2>
-				 
-				 <div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="resultbutton1"> 
-						ICS 111 Intro to Computer Science I
-					  </a>
-					  <div class="mobileresults" id="resultinfo1">
-					    <p><b>CRN: </b><br>84935</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Ravi Narayan</p>
-						<hr></hr>
-						<p><b>Location: </b><br>POST 127<br>POST 319</p>
-						<hr></hr>
-						<p><b>Time: </b><br>M 0530-0800p<br>W 0530-0645p</p>
-						<hr></hr>
-						<p></p>
-					  </div>
-					  <a class="btn course-dropdown-button" id="resultbutton2"> 
-						ICS 142 Discrete Math for CS I
-					  </a>
-					  <div class="mobileresults" id="resultinfo2">
-					    <p><b>CRN: </b><br>84095</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Kazuo Sugihara</p>
-						<hr></hr>
-						<p><b>Location: </b><br>BIL 150<br>MSB 114</p>
-						<hr></hr>
-						<p><b>Time: </b><br>TR 0130-0245p<br>F 1200-0115p</p>
-						<hr></hr>
-						<p></p>
-					  </div>
-					  <a class="btn course-dropdown-button" id="resultbutton3"> 
-						ICS 212 Program Structure
-					  </a>
-					  <div class="mobileresults" id="resultinfo3">
-					    <p><b>CRN: </b><br>84494</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Julia Patriarche</p>
-						<hr></hr>
-						<p><b>Location: </b><br>TBA</p>
-						<hr></hr>
-						<p><b>Time: </b><br>TBA</p>
-						<hr></hr>
-						<p><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></p>
-					  </div>
-					</div>
-				 
-				 
-			     <table class="result-table table-striped hidden-sm hidden-xs">
-				 <tr>
-				   <th>CRN</th>
-				   <th>Course</th>
-				   <th>Title</th>
-				   <th>Department</th>
-				   <th>Gen Ed./Focus</th>
-				   <th>Instructor</th>
-				   <th>Location</th>
-				   <th>Time</th>
-				   <th></th>
-				 </tr>
-				 
-				 <tr>
-				   <td>84935</td>
-				   <td>ICS 111</td>
-				   <td>Intro to Computer Science I</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Ravi Narayan</td>
-				   <td>POST 127, POST 319</td>
-				   <td>M 0530-0800p, W 0530-0645p</td>
-				 </tr>
-				 
-				 <tr>
-				   <td>84095</td>
-				   <td>ICS 141</td>
-				   <td>Discrete Math for CS I</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Kazuo Sugihara</td>
-				   <td>BIL 150, MSB 114</td>
-				   <td>TR 0130-0245p, F 1200-0115p</td>
-				 </tr>
-				 
-				 <tr>
-				   <td>84494</td>
-				   <td>ICS 212</td>
-				   <td>Program Structure</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Julia Patriarche</td>
-				   <td>TBA</td>
-				   <td>TBA</td>
-				   <td><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></td>
-				 </tr>
-				 
-				 
-				 </table>
-					
-				</div>
-				  <h2>My Courses</h2>
-				  
-				  <div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="myclassbutton1"> 
-						ICS 111 Intro to Computer Science I
-					  </a>
-					  <div class="mobileresults" id="myclassresult1">
-					    <p><b>CRN: </b><br>84935</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Ravi Narayan</p>
-						<hr></hr>
-						<p><b>Location: </b><br>POST 127<br>POST 319</p>
-						<hr></hr>
-						<p><b>Time: </b><br>M 0530-0800p<br> W 0530-0645p</p>
-						<hr></hr>
-						<p><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></p>
-					  </div>
-					  
-					  <a class="btn course-dropdown-button" id="myclassbutton2"> 
-						ICS 141 Discrete Math for CS I
-					  </a>
-					  <div class="mobileresults" id="myclassresult2">
-					    <p><b>CRN: </b><br>84095</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Kazuo Sugihara</p>
-						<hr></hr>
-						<p><b>Location: </b><br>BIL 150<br>MSB 114</p>
-						<hr></hr>
-						<p><b>Time: </b><br>TR 0130-0245p<br>F 1200-0115p</p>
-						<hr></hr>
-						<p><a href="results.html"><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></a></p>
-					  </div>
-					</div>
-				  
-				  
-				  <table class="my-courses-table table-striped hidden-sm hidden-xs">
-				    <tr>
-				   <th>CRN</th>
-				   <th>Course</th>
-				   <th>Title</th>
-				   <th>Department</th>
-				   <th>Gen Ed./Focus</th>
-				   <th>Instructor</th>
-				   <th>Location</th>
-				   <th>Time</th>
-				   <th></th>
-				   </tr>
-				   
-				   <tr>
-				   <td>84935</td>
-				   <td>ICS 111</td>
-				   <td>Intro to Computer Science I</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Ravi Narayan</td>
-				   <td>POST 127, POST 319</td>
-				   <td>M 0530-0800p, W 0530-0645p</td>
-				   <td><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></td>
-				   </tr>
-				   
-				   <tr>
-				   <td>84095</td>
-				   <td>ICS 141</td>
-				   <td>Discrete Math for CS I</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Kazuo Sugihara</td>
-				   <td>BIL 150, MSB 114</td>
-				   <td>TR 0130-0245p, F 1200-0115p</td>
-				   <td><a href="results.html"><button class="btn btn-danger btn-sm"><div class="glyphicon glyphicon-remove"></div> Remove</button></a></td>
-				   </tr>
-				  </table>
-             
-            </div>
-            <!-- /main -->
-          
+				});
+
+				$('#myclassbutton2').click(function() {
+
+					if ($('#myclassresult2').is(":visible")) {
+						$('#myclassresult2').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#myclassresult2').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
+
+				});
+			});
+		</script>
+
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <!--  Display three horizontal lines when navbar collapsed. -->
+            <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"></a>
         </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" style="color: black;">Search</a></li>
+            <li><a href="schedule.html" style="color: white;">View Schedule</a></li>
+            <li><a href="maps.html" style="color: white;">View Map</a></li>
+            <li><a href="account.html" style="color: white;">My Account</a></li>
+            <li><a href="index.html" style="color: white;">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /top nav -->
+  <div>
+    <h2>Results</h2>
+
+    <div class="visible-sm visible-xs">
+      <a class="btn course-dropdown-button" id="resultbutton1"> ICS 111 Intro to Computer Science I </a>
+      <div class="mobileresults" id="resultinfo1">
+        <p>
+          <b>CRN: </b><br>84935
+        </p>
+        <hr></hr>
+        <p>
+          <b>Gen Ed./Focus: </b><br>
+        </p>
+        <hr></hr>
+        <p>
+          <b>Instructor: </b><br>Ravi Narayan
+        </p>
+        <hr></hr>
+        <p>
+          <b>Location: </b><br>POST 127<br>POST 319
+        </p>
+        <hr></hr>
+        <p>
+          <b>Time: </b><br>M 0530-0800p<br>W 0530-0645p
+        </p>
+        <hr></hr>
+        <p></p>
+      </div>
+      <a class="btn course-dropdown-button" id="resultbutton2"> ICS 142 Discrete Math for CS I </a>
+      <div class="mobileresults" id="resultinfo2">
+        <p>
+          <b>CRN: </b><br>84095
+        </p>
+        <hr></hr>
+        <p>
+          <b>Gen Ed./Focus: </b><br>
+        </p>
+        <hr></hr>
+        <p>
+          <b>Instructor: </b><br>Kazuo Sugihara
+        </p>
+        <hr></hr>
+        <p>
+          <b>Location: </b><br>BIL 150<br>MSB 114
+        </p>
+        <hr></hr>
+        <p>
+          <b>Time: </b><br>TR 0130-0245p<br>F 1200-0115p
+        </p>
+        <hr></hr>
+        <p></p>
+      </div>
+      <a class="btn course-dropdown-button" id="resultbutton3"> ICS 212 Program Structure </a>
+      <div class="mobileresults" id="resultinfo3">
+        <p>
+          <b>CRN: </b><br>84494
+        </p>
+        <hr></hr>
+        <p>
+          <b>Gen Ed./Focus: </b><br>
+        </p>
+        <hr></hr>
+        <p>
+          <b>Instructor: </b><br>Julia Patriarche
+        </p>
+        <hr></hr>
+        <p>
+          <b>Location: </b><br>TBA
+        </p>
+        <hr></hr>
+        <p>
+          <b>Time: </b><br>TBA
+        </p>
+        <hr></hr>
+        <p>
+          <button class="btn btn-success btn-sm">
+            <div class="glyphicon glyphicon-plus"></div>
+            Add To Schedule
+          </button>
+        </p>
+      </div>
     </div>
 
-</div>
+
+    <table class="result-table table-striped hidden-sm hidden-xs">
+      <tr>
+        <th>CRN</th>
+        <th>Course</th>
+        <th>Title</th>
+        <th>Department</th>
+        <th>Gen Ed./Focus</th>
+        <th>Instructor</th>
+        <th>Location</th>
+        <th>Time</th>
+        <th></th>
+      </tr>
+
+      <tr>
+        <td>84935</td>
+        <td>ICS 111</td>
+        <td>Intro to Computer Science I</td>
+        <td>ICS</td>
+        <td></td>
+        <td>Ravi Narayan</td>
+        <td>POST 127, POST 319</td>
+        <td>M 0530-0800p, W 0530-0645p</td>
+      </tr>
+
+      <tr>
+        <td>84095</td>
+        <td>ICS 141</td>
+        <td>Discrete Math for CS I</td>
+        <td>ICS</td>
+        <td></td>
+        <td>Kazuo Sugihara</td>
+        <td>BIL 150, MSB 114</td>
+        <td>TR 0130-0245p, F 1200-0115p</td>
+      </tr>
+
+      <tr>
+        <td>84494</td>
+        <td>ICS 212</td>
+        <td>Program Structure</td>
+        <td>ICS</td>
+        <td></td>
+        <td>Julia Patriarche</td>
+        <td>TBA</td>
+        <td>TBA</td>
+        <td><button class="btn btn-success btn-sm">
+            <div class="glyphicon glyphicon-plus"></div>
+            Add To Schedule
+          </button></td>
+      </tr>
+
+
+    </table>
+
+  </div>
+  <h2>My Courses</h2>
+
+  <div class="visible-sm visible-xs">
+    <a class="btn course-dropdown-button" id="myclassbutton1"> ICS 111 Intro to Computer Science I </a>
+    <div class="mobileresults" id="myclassresult1">
+      <p>
+        <b>CRN: </b><br>84935
+      </p>
+      <hr></hr>
+      <p>
+        <b>Gen Ed./Focus: </b><br>
+      </p>
+      <hr></hr>
+      <p>
+        <b>Instructor: </b><br>Ravi Narayan
+      </p>
+      <hr></hr>
+      <p>
+        <b>Location: </b><br>POST 127<br>POST 319
+      </p>
+      <hr></hr>
+      <p>
+        <b>Time: </b><br>M 0530-0800p<br> W 0530-0645p
+      </p>
+      <hr></hr>
+      <p>
+        <button class="btn btn-danger btn-sm">
+          <div class="glyphicon glyphicon-remove"></div>
+          Remove
+        </button>
+      </p>
+    </div>
+
+    <a class="btn course-dropdown-button" id="myclassbutton2"> ICS 141 Discrete Math for CS I </a>
+    <div class="mobileresults" id="myclassresult2">
+      <p>
+        <b>CRN: </b><br>84095
+      </p>
+      <hr></hr>
+      <p>
+        <b>Gen Ed./Focus: </b><br>
+      </p>
+      <hr></hr>
+      <p>
+        <b>Instructor: </b><br>Kazuo Sugihara
+      </p>
+      <hr></hr>
+      <p>
+        <b>Location: </b><br>BIL 150<br>MSB 114
+      </p>
+      <hr></hr>
+      <p>
+        <b>Time: </b><br>TR 0130-0245p<br>F 1200-0115p
+      </p>
+      <hr></hr>
+      <p>
+        <a href="results.html"><button class="btn btn-danger btn-sm">
+            <div class="glyphicon glyphicon-remove"></div>
+            Remove
+          </button></a>
+      </p>
+    </div>
+  </div>
+
+
+  <table class="my-courses-table table-striped hidden-sm hidden-xs">
+    <tr>
+      <th>CRN</th>
+      <th>Course</th>
+      <th>Title</th>
+      <th>Department</th>
+      <th>Gen Ed./Focus</th>
+      <th>Instructor</th>
+      <th>Location</th>
+      <th>Time</th>
+      <th></th>
+    </tr>
+
+    <tr>
+      <td>84935</td>
+      <td>ICS 111</td>
+      <td>Intro to Computer Science I</td>
+      <td>ICS</td>
+      <td></td>
+      <td>Ravi Narayan</td>
+      <td>POST 127, POST 319</td>
+      <td>M 0530-0800p, W 0530-0645p</td>
+      <td><button class="btn btn-danger btn-sm">
+          <div class="glyphicon glyphicon-remove"></div>
+          Remove
+        </button></td>
+    </tr>
+
+    <tr>
+      <td>84095</td>
+      <td>ICS 141</td>
+      <td>Discrete Math for CS I</td>
+      <td>ICS</td>
+      <td></td>
+      <td>Kazuo Sugihara</td>
+      <td>BIL 150, MSB 114</td>
+      <td>TR 0130-0245p, F 1200-0115p</td>
+      <td><a href="results.html"><button class="btn btn-danger btn-sm">
+            <div class="glyphicon glyphicon-remove"></div>
+            Remove
+          </button></a></td>
+    </tr>
+  </table>
+
+  </div>
+  <!-- /main -->
+
+  </div>
+  </div>
+
+  </div>
 
 </body>
 </html>
