@@ -446,6 +446,7 @@ height: 100%;
   margin: 10px;
   border: solid;
   border-spacing: 10px;
+  max-width: 1000px;
 }
 
 .my-courses-table {
@@ -542,6 +543,13 @@ margin-left: 10px;
   width: 25px;
   height: 25px;
   cursor: pointer;
+}
+
+.watchicon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .classinfo {

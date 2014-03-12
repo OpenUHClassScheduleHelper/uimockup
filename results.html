@@ -17,10 +17,6 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c3b0abb100cc0d79c4648f669e9f311c6a0560b8
   <!-- Load Bootstrap JavaScript components -->
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -481,9 +477,9 @@
         <td>TR 0130-0220p</td>
         <td class="buttoncolumn"><a href="addclassresults.html"><button class="btn btn-success btn-sm"
               title="Add to Schedule">
-              <div class="glyphicon glyphicon-plus" title="Add to Schedule"></div>
+              <div class="glyphicon glyphicon-plus addicon" title="Add to Schedule"></div>
             </button></a> <img class="infoicon" src="more_information_icon.jpg" data-toggle="modal" data-target="#infomodal2"
-          title="Late Breaking News"></img></td>
+          title="Late Breaking News"></img><img class="watchicon" src="eye.svg" data-toggle="modal" data-target="#watchmodal"></img></td>
       </tr>
 
 
@@ -500,7 +496,7 @@
               title="Add to Schedule">
               <div class="glyphicon glyphicon-plus" title="Add to Schedule"></div>
             </button></a> <img class="infoicon" src="more_information_icon.jpg" data-toggle="modal" data-target="#infomodal3"
-          title="Late Breaking News"></img></td>
+          title="Late Breaking News"></img><img class="watchicon" src="eye.svg" data-toggle="modal" data-target="#watchmodal"></img></td>
       </tr>
 
 
@@ -822,6 +818,29 @@
       </div>
     </div>
   </div>
+  
+  
+  <div class="modal fade" id="watchmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <h4><b>Add this class to your watch list?</b></h4>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
 
 
 </body>
