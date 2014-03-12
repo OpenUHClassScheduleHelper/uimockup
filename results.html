@@ -17,759 +17,809 @@
 </head>
 <body>
 
-<!-- Load Bootstrap JavaScript components -->
-<script src="http://code.jquery.com/jquery.min.js"></script>
- <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<!-- Load Google Fonts -->
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<script type="text/javascript"><!--
-    div = {
-        show: function(elem) {
-        	var input_list = document.getElementsByName(elem);
-        	for(var i = 0; i < input_list.length; i++) {
-        	    input_list[i].style.visibility = 'hidden';
-        	}
-        },
-        hide: function(elem) {
-            var input_list = document.getElementsByName(elem);
-            for(var i = 0; i < input_list.length; i++) {
-                input_list[i].style.visibility = 'visible';
-            }
-        }
-    }
---></script>
+  <!-- Load Google Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
-<script type="text/javascript"><!--
-    conflict = {
-        show: function(elem) {
-            var input_list = document.getElementsByName(elem);
-            for(var i = 0; i < input_list.length; i++) {
-                input_list[i].style.backgroundColor = '#F58E9D';
-            }
-            document.getElementById('conflict-alert').style.display='table-row';
-        },
-        hide: function(elem) {
-            var input_list = document.getElementsByName(elem);
-            for(var i = 0; i < input_list.length; i++) {
-                input_list[i].style.backgroundColor = 'white';
-            }
-            document.getElementById("conflict-alert").style.display="none";
-        }
-    }
---></script>
+  <script type="text/javascript">
+		<!--
+			div = {
+				hide : function(elem) {
+					var input_list = document.getElementsByName(elem);
+					for ( var i = 0; i < input_list.length; i++) {
+						input_list[i].style.visibility = 'hidden';
+					}
+                    document.getElementById(elem).className = 'defaultRow';
+				},
+				show : function(elem) {
+					var input_list = document.getElementsByName(elem);
+					for ( var i = 0; i < input_list.length; i++) {
+						input_list[i].style.visibility = 'visible';
+					}
+                    document.getElementById(elem).className = 'tempRow';
+				}
+			}
+			-->
+		</script>
 
-<script type='text/javascript'>        
-$(document).ready(function() {
-/* off-canvas sidebar toggle */
-$('[data-toggle=offcanvas]').click(function() {
-    $(this).toggleClass('visible-xs text-center');
-    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
-    $('.row-offcanvas').toggleClass('active');
-    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
-    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
-    $('#btnShow').toggle();
- });       
-});
-</script>
+  <script type="text/javascript">
+		<!--
+			conflict = {
+				show : function(elem) {
+					var input_list = document.getElementsByName(elem);
+					for ( var i = 0; i < input_list.length; i++) {
+						input_list[i].style.backgroundColor = '#F58E9D';
+					}
+					document.getElementById('conflict-alert').style.display = 'table-row';
+					document.getElementById('84494').className = 'conflictRow';
+				},
+				hide : function(elem) {
+					var input_list = document.getElementsByName(elem);
+					for ( var i = 0; i < input_list.length; i++) {
+						input_list[i].style.backgroundColor = 'white';
+					}
+					document.getElementById("conflict-alert").style.display = "none";
+                    document.getElementById('84494').className = 'defaultRow';
+				}
+			}
+			-->
+		</script>
 
-<script type='text/javascript'>
-$(document).ready(function() {
-$('#resultbutton1').click(function() {
+  <script type='text/javascript'>
+			$(document)
+					.ready(
+							function() {
+								/* off-canvas sidebar toggle */
+								$('[data-toggle=offcanvas]')
+										.click(
+												function() {
+													$(this)
+															.toggleClass(
+																	'visible-xs text-center');
+													$(this)
+															.find('i')
+															.toggleClass(
+																	'glyphicon-chevron-right glyphicon-chevron-left');
+													$('.row-offcanvas')
+															.toggleClass(
+																	'active');
+													$('#lg-menu')
+															.toggleClass(
+																	'hidden-xs')
+															.toggleClass(
+																	'visible-xs');
+													$('#xs-menu')
+															.toggleClass(
+																	'visible-xs')
+															.toggleClass(
+																	'hidden-xs');
+													$('#btnShow').toggle();
+												});
+							});
+		</script>
 
-    if($('#resultinfo1').is(":visible")) {
-    $('#resultinfo1').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#resultinfo1').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+  <script type='text/javascript'>
+			$(document).ready(function() {
+				$('#resultbutton1').click(function() {
 
-$('#resultbutton2').click(function() {
+					if ($('#resultinfo1').is(":visible")) {
+						$('#resultinfo1').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#resultinfo1').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
 
-    if($('#resultinfo2').is(":visible")) {
-    $('#resultinfo2').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#resultinfo2').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+				});
 
-$('#resultbutton3').click(function() {
+				$('#resultbutton2').click(function() {
 
-    if($('#resultinfo3').is(":visible")) {
-    $('#resultinfo3').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#resultinfo3').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+					if ($('#resultinfo2').is(":visible")) {
+						$('#resultinfo2').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#resultinfo2').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
 
-$('#myclassbutton1').click(function() {
+				});
 
-    if($('#myclassresult1').is(":visible")) {
-    $('#myclassresult1').slideUp(400, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#myclassresult1').slideDown(600, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+				$('#resultbutton3').click(function() {
 
+					if ($('#resultinfo3').is(":visible")) {
+						$('#resultinfo3').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#resultinfo3').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
 
-$('#classinfobutton1').click(function() {
+				});
 
-    if($('#classinfo1').is(":visible")) {
-    $('#classinfo1').slideUp(200, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#classinfo1').slideDown(200, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+				$('#myclassbutton1').click(function() {
 
-$('#classinfobutton2').click(function() {
+					if ($('#myclassresult1').is(":visible")) {
+						$('#myclassresult1').slideUp(400, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#myclassresult1').slideDown(600, function() {
+							//Animation Complete
+						});
+					}
 
-    if($('#classinfo2').is(":visible")) {
-    $('#classinfo2').slideUp(200, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#classinfo2').slideDown(200, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+				});
 
-$('#classinfobutton3').click(function() {
+				$('#classinfobutton1').click(function() {
 
-    if($('#classinfo3').is(":visible")) {
-    $('#classinfo3').slideUp(200, function() {
-    		//Animation Complete
-    });
-	} else {
-	$('#classinfo3').slideDown(200, function() {
-    		//Animation Complete
-    });
-	}
-	
-});
+					if ($('#classinfo1').is(":visible")) {
+						$('#classinfo1').slideUp(200, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#classinfo1').slideDown(200, function() {
+							//Animation Complete
+						});
+					}
 
+				});
 
-$("#infoicon1").bind('fade-cycle', function() {
-    $("#infoicon1").fadeIn('slow', function() {
-        $("#infoicon1").fadeOut('slow', function() {
-            $("#infoicon1").trigger('fade-cycle');
-        });
-    });
-});
+				$('#classinfobutton2').click(function() {
 
-/*$("#infoicon1").bind('fade-cycle', function() {
-    $("#infoicon1").fadeTo('slow',0.5, function() {
-        $("#infoicon1").fadeTo('slow',1.0, function() {
-            $("#infoicon1").trigger('fade-cycle');
-        });
-    });
-});*/
+					if ($('#classinfo2').is(":visible")) {
+						$('#classinfo2').slideUp(200, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#classinfo2').slideDown(200, function() {
+							//Animation Complete
+						});
+					}
 
-$('.infoicon').trigger('fade-cycle');
-});
-</script>
+				});
 
-<script type="text/javascript">
-$(document).ready(function() {
-	$("#slider-range").slider({
-		range: true,
-		min: 0,
-		max: 1439,
-		values: [540, 1020],
-		slide: slideTime
-	});
-	
-function slideTime(event, ui){
-    var val0 = $("#slider-range").slider("values", 0),
-        val1 = $("#slider-range").slider("values", 1),
-        minutes0 = parseInt(val0 % 60, 10),
-        hours0 = parseInt(val0 / 60 % 24, 10),
-        minutes1 = parseInt(val1 % 60, 10),
-        hours1 = parseInt(val1 / 60 % 24, 10);
-    startTime = getTime(hours0, minutes0);
-    endTime = getTime(hours1, minutes1);
-    $("#time").text(startTime + ' - ' + endTime);
-}
+				$('#classinfobutton3').click(function() {
 
-function getTime(hours, minutes) {
-    var time = null;
-    minutes = minutes + "";
-    if (hours < 12) {
-        time = "AM";
-    }
-    else {
-        time = "PM";
-    }
-    if (hours == 0) {
-        hours = 12;
-    }
-    if (hours > 12) {
-        hours = hours - 12;
-    }
-    if (minutes.length == 1) {
-        minutes = "0" + minutes;
-    }
-    return hours + ":" + minutes + " " + time;
-}
-	
-	slideTime();
-});
-</script>
+					if ($('#classinfo3').is(":visible")) {
+						$('#classinfo3').slideUp(200, function() {
+							//Animation Complete
+						});
+					} else {
+						$('#classinfo3').slideDown(200, function() {
+							//Animation Complete
+						});
+					}
 
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#addmessage').click(function() {
-    $('#messagebox').show();
-  
-  });
+				});
 
-});
-</script>
+				$("#infoicon1").bind('fade-cycle', function() {
+					$("#infoicon1").fadeIn('slow', function() {
+						$("#infoicon1").fadeOut('slow', function() {
+							$("#infoicon1").trigger('fade-cycle');
+						});
+					});
+				});
 
+				/*$("#infoicon1").bind('fade-cycle', function() {
+				 $("#infoicon1").fadeTo('slow',0.5, function() {
+				 $("#infoicon1").fadeTo('slow',1.0, function() {
+				 $("#infoicon1").trigger('fade-cycle');
+				 });
+				 });
+				 });*/
 
-<div class="wrapper">
-    <div class="box">
-        <div class="row row-offcanvas row-offcanvas-left">
-                      
-          
-            <!-- sidebar -->
-            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-              
-                <ul class="nav">
-                    <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-                </ul>
-               
-                <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="search.html"><i class="glyphicon glyphicon-search"></i> Search</a></li>
-                    <li><a href="schedule.html"><i class="glyphicon glyphicon-print"></i> My Schedule</a></li>
-                    <li><a href="maps.html"><i class="glyphicon glyphicon-road"></i> View Map</a></li>
-                    <br>
-                    <li><a href="account.html"><i class="glyphicon glyphicon-home"></i> My Account</a></li>
-                </ul>
-              
-                <!-- tiny only nav-->
-              <ul class="nav visible-xs" id="xs-menu">
-                    <li><a href="search.html" class="text-center" title="Search"><i class="glyphicon glyphicon-search"></i></a></li>
-                    <li><a href="schedule.html" class="text-center" title="Print"><i class="glyphicon glyphicon-print"></i></a></li>
-                    <li><a href="maps.html" class="text-center" title="Map"><i class="glyphicon glyphicon-road"></i></a></li>
-                    <br>
-                    <li><a href="account.html" class="text-center" title="My Account"><i class="glyphicon glyphicon-home"></i></a></li>
-                </ul>
-            </div>
-            <!-- /sidebar -->
-          
-            <!-- main right col -->
-            <div class="column col-sm-10 col-xs-11" id="main">
-              <!-- Header Mobile -->
-              <div class="visible-xs">
-                <div class="header_banner">
-                  <div class="login-header">
-                  </div>
-                </div>
-              </div>
-            
-              <!-- Header Desktop/Laptop -->
-              <div class="hidden-xs">
-                <img class="pull-left" width="100px" src="UH_Warriors.jpg">
-                <p class="navbar-text" style="color:black;">UH Class Schedule Helper</p>
-              </div>
-  
-              <!-- Empty div for spacing -->
-               <div class="container">
-                <div class="full col-md-12">
-                </div>
-              </div>
-    
-                <!-- /top nav -->
-				<div id="revised-search">
+				$('.infoicon').trigger('fade-cycle');
+			});
+		</script>
 
-                        <form id="searchForm" method="post" action="results.html">
-                            <fieldset>
+  <script type="text/javascript">
+			$(document)
+					.ready(
+							function() {
+								$("#slider-range").slider({
+									range : true,
+									min : 0,
+									max : 1439,
+									values : [ 540, 1020 ],
+									slide : slideTime
+								});
 
-                                <input id="s" class="form-control" type="text"
-                                    placeholder="Search by name, CRN, department, instructor, etc." /> <input
-                                    type="submit" value="Search"
-                                    id="submitButton" class="btn btn-default" />
+								function slideTime(event, ui) {
+									var val0 = $("#slider-range").slider(
+											"values", 0), val1 = $(
+											"#slider-range")
+											.slider("values", 1), minutes0 = parseInt(
+											val0 % 60, 10), hours0 = parseInt(
+											val0 / 60 % 24, 10), minutes1 = parseInt(
+											val1 % 60, 10), hours1 = parseInt(
+											val1 / 60 % 24, 10);
+									startTime = getTime(hours0, minutes0);
+									endTime = getTime(hours1, minutes1);
+									$("#time")
+											.text(startTime + ' - ' + endTime);
+								}
 
-                                <div id="searchInContainer">
-                                    <!-- focus requirements -->
-                                    <label style="font-size:13px"><b>Focus</b>: </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox"
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        style="margin-top: -0.5px">
-                                        ETH
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox"
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        style="margin-top: -0.5px">
-                                        HAP
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox"
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        style="margin-top: -0.5px">
-                                        OC
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox"
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        style="margin-top: -0.5px">
-                                        WI
-                                    </label>
-                                </div>
-								
-								<div id="advancedSearch">
-								  <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#advModal">Advanced Search</button>
-								</div>
+								function getTime(hours, minutes) {
+									var time = null;
+									minutes = minutes + "";
+									if (hours < 12) {
+										time = "AM";
+									} else {
+										time = "PM";
+									}
+									if (hours == 0) {
+										hours = 12;
+									}
+									if (hours > 12) {
+										hours = hours - 12;
+									}
+									if (minutes.length == 1) {
+										minutes = "0" + minutes;
+									}
+									return hours + ":" + minutes + " " + time;
+								}
 
-                            </fieldset>
-                        </form>
+								slideTime();
+							});
+		</script>
+
+  <script type="text/javascript">
+			$(document).ready(function() {
+				$('#addmessage').click(function() {
+					$('#messagebox').show();
+
+				});
+
+			});
+		</script>
 
 
-                    </div>
-				
-				
-               <div> 
-			     <h2>Results</h2>
-				 
-				 <div class="visible-sm visible-xs">
-					  <a class="btn course-dropdown-button" id="resultbutton1" 
-                         onMouseOut="div.show('84935')" onMouseOver="div.hide('84935')"> 
-						ICS 111 Intro to Computer Science I
-					  </a>
-					  <div class="mobileresults" id="resultinfo1">
-					    <p><b>CRN: </b><br>84935</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Ravi Narayan</p>
-						<hr></hr>
-						<p><b>Location: </b><br>POST 127<br>POST 319</p>
-						<hr></hr>
-						<p><b>Time: </b><br>M 0530-0800p<br>W 0530-0645p</p>
-						<hr></hr>
-						<p></p>
-					  </div>
-					  
-					  <a class="btn course-dropdown-button" id="resultbutton2" 
-                         onMouseOut="div.show('84095')" onMouseOver="div.hide('84095')"> 
-						ICS 142 Discrete Math for CS I
-					  </a>
-					  <div class="mobileresults" id="resultinfo2">
-					    <p><b>CRN: </b><br>84095</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Kazuo Sugihara</p>
-						<hr></hr>
-						<p><b>Location: </b><br>BIL 150<br>MSB 114</p>
-						<hr></hr>
-						<p><b>Time: </b><br>TR 0130-0245p<br>F 1200-0115p</p>
-						<hr></hr>
-						<p>
-						<a href="addclassresults.html"><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></a>
-						</p>
-					  </div>
-					  
-					  <a class="btn course-dropdown-button" id="resultbutton3" 
-                         onMouseOut="conflict.hide('84494')" onMouseOver="conflict.show('84494')"> 
-						ICS 212 Program Structure
-					  </a>
-					  <div class="mobileresults" id="resultinfo3">
-					    <p><b>CRN: </b><br>84494</p>
-						<hr></hr>
-						<p><b>Gen Ed./Focus: </b><br> </p>
-						<hr></hr>
-						<p><b>Instructor: </b><br>Julia Patriarche</p>
-						<hr></hr>
-						<p><b>Location: </b><br>TBA</p>
-						<hr></hr>
-						<p><b>Time: </b><br>TBA</p>
-						<hr></hr>
-						<p><button class="btn btn-success btn-sm"><div class="glyphicon glyphicon-plus"></div> Add To Schedule</button></p>
-					  </div>
-					</div>
-				 
-				 
-			     <table class="result-table hidden-sm hidden-xs">
-				 <tr class="tableheader">
-				   <th>CRN</th>
-				   <th>Course</th>
-				   <th>Title</th>
-				   <th>Department</th>
-				   <th>Gen Ed./Focus</th>
-				   <th>Instructor</th>
-				   <th>Location</th>
-				   <th>Time</th>
-				   <th></th>
-				 </tr>
-                
-				 <tr onMouseOut="div.show('84935')" onMouseOver="div.hide('84935')">
-				   <td><a id="classinfobutton1">84935</a></td>
-				   <td>ICS 111</td>
-				   <td>Intro to Computer Science I</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Ravi Narayan</td>
-				   <td>POST 127, POST 319</td>
-				   <td>MW 0730-0820a</td>
-				   <td class="buttoncolumn">
-				   <button class="btn btn-success btn-sm added" title="Already Added"><div class="glyphicon glyphicon-plus" title="Already Added"></div></button>
-				   <img class="infoicon" id="infoicon1" src="more_information_icon.jpg" data-toggle="modal" data-target="#infomodal1" title="Late Breaking News"></img> 
-				   </td>
-				 </tr>
-				 
-				 
-				 <tr onMouseOut="div.show('84095')" onMouseOver="div.hide('84095')">
-				   <td><a id="classinfobutton2">84095</a></td>
-				   <td>ICS 141</td>
-				   <td>Discrete Math for CS I</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Kazuo Sugihara</td>
-				   <td>BIL 150, MSB 114</td>
-				   <td>TR 0130-0220p</td>
-				   <td class="buttoncolumn">
-				   <a href="addclassresults.html"><button class="btn btn-success btn-sm" title="Add to Schedule"><div class="glyphicon glyphicon-plus" title="Add to Schedule"></div></button></a>
-				   <img class="infoicon" src="more_information_icon.jpg" data-toggle="modal" data-target="#infomodal2" title="Late Breaking News"></img> 
-				   </td>
-				 </tr>
-				 
-				 
-				 <tr onMouseOut="conflict.hide('84494')" onMouseOver="conflict.show('84494')">
-				   <td><a id="classinfobutton3">84494</a></td>
-				   <td>ICS 212</td>
-				   <td>Program Structure</td>
-				   <td>ICS</td>
-				   <td></td>
-				   <td>Julia Patriarche</td>
-				   <td>TBA</td>
-				   <td>MW 1130-1220p</td>
-				   <td class="buttoncolumn">
-				   <a href="addclassresults.html"><button class="btn btn-success btn-sm" title="Add to Schedule"><div class="glyphicon glyphicon-plus" title="Add to Schedule"></div></button></a>
-				   <img class="infoicon" src="more_information_icon.jpg" data-toggle="modal" data-target="#infomodal3" title="Late Breaking News"></img> 
-				   </td>
-				 </tr>
-				 
-				 
-				 </table>
-					
-				</div>
-				  <h2>My Schedule</h2>
-				  
-                  <div class="table-responsive" style="margin-left:10px;margin-right:10px;">
-                    <table class="table table-bordered table-striped">
-                      <thead>
-                        <tr id="conflict-alert" style="display:none; background-color:#F58E9D;"><td colspan="6">
-                            Conflict Exists
-                        </td></tr>
-                        <tr>
-                          <th>Time</th>
-                          <th>Monday</th>
-                          <th>Tuesday</th>
-                          <th>Wednesday</th>
-                          <th>Thursday</th>
-                          <th>Friday</th>                
-                        </tr>
-                      </thead>
-                      
-                      <tbody>
-                        <tr>
-                          <td>7:30-8:20</td>
-                          <td id="tempCell" name="84935">ICS111</td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td id="tempCell" name="84935">ICS111</td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr> 
-                        <tr>
-                          <td>8:30-9:20</td>
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>
-                          <td>9:30-10:20</td> 
-                          <td>ICS211</td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td>ICS211</td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>
-                          <td>10:30-11:20</td> 
-                          <td></td> <!-- Monday -->
-                          <td>ENG111</td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td>ENG111</td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>  
-                          <td>11:30-12:20</td>
-                          <td name="84494">MATH242</td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td name="84494">MATH242</td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>  
-                          <td>12:30-1:20</td>  
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                        <tr>  
-                          <td>1:30-2:20</td> 
-                          <td></td> <!-- Monday -->
-                          <td id="tempCell" name="84095">ICS141</td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td id="tempCell" name="84095">ICS141</td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->  
-                        </tr>
-                        <tr>  
-                          <td>2:30-3:20</td>  
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->      
-                          </tr>
-                        <tr> 
-                          <td>3:30-4:20</td> 
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->        
-                        </tr>
-                        <tr>  
-                          <td>4:30-5:20</td>  
-                          <td></td> <!-- Monday -->
-                          <td></td> <!-- Tuesday -->
-                          <td></td> <!-- Wednesday -->
-                          <td></td> <!-- Thursday -->
-                          <td></td> <!-- Friday -->
-                        </tr>
-                      </tbody>
-                    </table>
-             
-            </div>
-            <!-- /main -->
-          <div class="bottom-spacing"></div>
+
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <!--  Display three horizontal lines when navbar collapsed. -->
+            <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"></a>
+>>>>>>> 964ee25cf962a50b4bb1514bfd8192405c085474
         </div>
-    </div>
-
-</div>
-
-<div class="modal fade" id="infomodal1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
-	    <h4><b>Course Summary</b></h4>
-        <p>Overview of computer science, writing programs. Pre: Recommended: computer experience. </p><br>
-		<h4><b>Late Breaking Information</b></h4>
-		<p class="professor-new-info">2/28/14 Ravi Narayan: This class will now be available with a WI credit.</p>
-		<div id="messagebox" class="add-comment-area">
-		<p><b>New Message:</b></p>
-		<textarea rows="4" cols="50"></textarea>
-		</div>
-		<p>12/15/13 Jonathan Ortal: Professor Narayan is in the process of trying to make ICS 111 a WI credit.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" id="addmessage" class="btn btn-primary">Add Message</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div class="modal fade" id="infomodal2">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
-		<h4><b>Course Summary</b></h4>
-        <p>Logic, sets, functions, matrices, algorithmic concepts, mathematical reasoning, recursion, counting techniques, probability theory.</p><br>
-		<h4><b>Late Breaking Information</b></h4>
-		
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add Message</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div class="modal fade" id="infomodal3">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
-		<h4><b>Course Summary</b></h4>
-        <p>Program organization paradigms, programming environments, implementation of a module from specifications, the C and C++ programming languages. Pre: 211 or consent. </p><br>
-		<h4><b>Late Breaking Information</b></h4>
-		<p class="professor-new-info">12/10/14 Julia Patriarche: This class will be conducted as an online course.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add Message</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-<div class="modal fade" id="advModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-      </div>
-      <div class="modal-body">
-	    <h4 class="modal-title" id="myModalLabel"><b>Advanced Search</b></h4><br>
-        <select class="form-control" placeholder="Department">
-		  <option>Select your Department</option>
-		  <option>Academy for Creative Media (ACM)</option>
-		  <option>Accounting (ACC)</option>
-		  <option>Aerospace Studies (AS)</option>
-		  <option>...</option>
-		  <option>Information & Computer Science (ICS)</option>
-		</select>
-		<br>
-        <select class="form-control" placeholder="Course Title">
-		  <option>Course Title</option>
-		  <option>Intro to CS I (ICS 111)</option>
-		  <option>Discrete Math for CS I (ICS 141)</option>
-		  <option>Intro to CS II (ICS 211)</option>
-		  <option>...</option>
-		  <option>Topcs in Software (ICS 691)</option>
-		</select>
-		<br>
-		<label><b>Days:</b></label>
-		<br>
-        <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
-         Sunday
-        </label>
-        <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
-         Monday
-        </label>  
-        <label class="checkbox-inline">		
-        <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
-         Tuesday
-        </label>    
-		<label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
-         Wednesday
-        </label>    	
-		<label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
-         Thursday
-        </label>    	
-		<label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
-         Friday
-        </label>    	
-		<label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
-         Saturday
-        </label>    		
-		<br><br>
-		<label><b>Time Range:</b></label>
-		<br>
-		<b><span id="time"></span></b>
-		<div id="slider-range"></div>
-		<br>
-		
-                                    <label style="margin-right:2px;"><b>Focus</b>: </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox"
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        style="">
-                                        ETH
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox"
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        style="">
-                                        HAP
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox"
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        style="">
-                                        OC
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox"
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        style="">
-                                        WI
-                                    </label>
-									<br>
-		</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		<!-- both buttons close modal for now -->
-        <button type="button" class="btn btn-success" data-dismiss="modal">Search</button> 
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" style="color: black;">Search</a></li>
+            <li><a href="maps.html" style="color: white;">View Map</a></li>
+            <li><a href="account.html" style="color: white;">My Account</a></li>
+            <li><a href="index.html" style="color: white;">Sign Out</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>				
+
+
+  <!-- /top nav -->
+  <div id="revised-search">
+
+    <form id="searchForm" method="post" action="results.html">
+      <fieldset>
+
+        <input id="s" class="form-control" type="text" placeholder="" /> <input type="submit" value="Search"
+          id="submitButton" class="btn btn-default" />
+
+        <div id="searchInContainer">
+          <!-- focus requirements -->
+          <label style="font-size: 13px"><b>Focus</b>: </label> <label class="checkbox-inline"> <input
+            type="checkbox" id="inlineCheckbox1" value="option1" style="margin-top: -0.5px"> ETH
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1"
+            style="margin-top: -0.5px"> HAP
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1"
+            style="margin-top: -0.5px"> OC
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1"
+            style="margin-top: -0.5px"> WI
+          </label>
+        </div>
+
+        <div id="advancedSearch">
+          <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#advModal">Advanced Search</button>
+        </div>
+
+      </fieldset>
+    </form>
+
+
+  </div>
+
+
+  <div>
+    <h2>Results</h2>
+
+    <div class="visible-sm visible-xs">
+      <a class="btn course-dropdown-button" id="resultbutton1" onMouseOut="div.show('84935')"
+        onMouseOver="div.hide('84935')"> ICS 111 Intro to Computer Science I </a>
+      <div class="mobileresults" id="resultinfo1">
+        <p>
+          <b>CRN: </b><br>84935
+        </p>
+        <hr></hr>
+        <p>
+          <b>Gen Ed./Focus: </b><br>
+        </p>
+        <hr></hr>
+        <p>
+          <b>Instructor: </b><br>Ravi Narayan
+        </p>
+        <hr></hr>
+        <p>
+          <b>Location: </b><br>POST 127<br>POST 319
+        </p>
+        <hr></hr>
+        <p>
+          <b>Time: </b><br>M 0530-0800p<br>W 0530-0645p
+        </p>
+        <hr></hr>
+        <p></p>
+      </div>
+
+      <a class="btn course-dropdown-button" id="resultbutton2" onMouseOut="div.show('84095')"
+        onMouseOver="div.hide('84095')"> ICS 142 Discrete Math for CS I </a>
+      <div class="mobileresults" id="resultinfo2">
+        <p>
+          <b>CRN: </b><br>84095
+        </p>
+        <hr></hr>
+        <p>
+          <b>Gen Ed./Focus: </b><br>
+        </p>
+        <hr></hr>
+        <p>
+          <b>Instructor: </b><br>Kazuo Sugihara
+        </p>
+        <hr></hr>
+        <p>
+          <b>Location: </b><br>BIL 150<br>MSB 114
+        </p>
+        <hr></hr>
+        <p>
+          <b>Time: </b><br>TR 0130-0245p<br>F 1200-0115p
+        </p>
+        <hr></hr>
+        <p>
+          <a href="addclassresults.html"><button class="btn btn-success btn-sm">
+              <div class="glyphicon glyphicon-plus"></div>
+              Add To Schedule
+            </button></a>
+        </p>
+      </div>
+
+      <a class="btn course-dropdown-button" id="resultbutton3" onMouseOut="conflict.hide('84494')"
+        onMouseOver="conflict.show('84494')"> ICS 212 Program Structure </a>
+      <div class="mobileresults" id="resultinfo3">
+        <p>
+          <b>CRN: </b><br>84494
+        </p>
+        <hr></hr>
+        <p>
+          <b>Gen Ed./Focus: </b><br>
+        </p>
+        <hr></hr>
+        <p>
+          <b>Instructor: </b><br>Julia Patriarche
+        </p>
+        <hr></hr>
+        <p>
+          <b>Location: </b><br>TBA
+        </p>
+        <hr></hr>
+        <p>
+          <b>Time: </b><br>TBA
+        </p>
+        <hr></hr>
+        <p>
+          <button class="btn btn-success btn-sm">
+            <div class="glyphicon glyphicon-plus"></div>
+            Add To Schedule
+          </button>
+        </p>
+      </div>
+    </div>
+
+
+    <table class="result-table hidden-sm hidden-xs">
+      <tr class="tableheader">
+        <th>CRN</th>
+        <th>Course</th>
+        <th>Title</th>
+        <th>Department</th>
+        <th>Gen Ed./Focus</th>
+        <th>Instructor</th>
+        <th>Location</th>
+        <th>Time</th>
+        <th></th>
+      </tr>
+
+      <tr id="84935" onMouseOut="div.hide('84935')" onMouseOver="div.show('84935')">
+        <td><a id="classinfobutton1">84935</a></td>
+        <td>ICS 111</td>
+        <td>Intro to Computer Science I</td>
+        <td>ICS</td>
+        <td></td>
+        <td>Ravi Narayan</td>
+        <td>POST 127, POST 319</td>
+        <td>MW 0730-0820a</td>
+        <td class="buttoncolumn">
+          <button class="btn btn-success btn-sm added" title="Already Added">
+            <div class="glyphicon glyphicon-plus" title="Already Added"></div>
+          </button> <img class="infoicon" id="infoicon1" src="more_information_icon.jpg" data-toggle="modal"
+          data-target="#infomodal1" title="Late Breaking News"></img>
+        </td>
+      </tr>
+
+
+      <tr id="84095" onMouseOut="div.hide('84095')" onMouseOver="div.show('84095')">
+        <td><a id="classinfobutton2">84095</a></td>
+        <td>ICS 141</td>
+        <td>Discrete Math for CS I</td>
+        <td>ICS</td>
+        <td></td>
+        <td>Kazuo Sugihara</td>
+        <td>BIL 150, MSB 114</td>
+        <td>TR 0130-0220p</td>
+        <td class="buttoncolumn"><a href="addclassresults.html"><button class="btn btn-success btn-sm"
+              title="Add to Schedule">
+              <div class="glyphicon glyphicon-plus" title="Add to Schedule"></div>
+            </button></a> <img class="infoicon" src="more_information_icon.jpg" data-toggle="modal" data-target="#infomodal2"
+          title="Late Breaking News"></img></td>
+      </tr>
+
+
+      <tr id="84494" onMouseOut="conflict.hide('84494')" onMouseOver="conflict.show('84494')">
+        <td><a id="classinfobutton3">84494</a></td>
+        <td>ICS 212</td>
+        <td>Program Structure</td>
+        <td>ICS</td>
+        <td></td>
+        <td>Julia Patriarche</td>
+        <td>TBA</td>
+        <td>MW 1130-1220p</td>
+        <td class="buttoncolumn"><a href="addclassresults.html"><button class="btn btn-success btn-sm"
+              title="Add to Schedule">
+              <div class="glyphicon glyphicon-plus" title="Add to Schedule"></div>
+            </button></a> <img class="infoicon" src="more_information_icon.jpg" data-toggle="modal" data-target="#infomodal3"
+          title="Late Breaking News"></img></td>
+      </tr>
+
+
+    </table>
+
+  </div>
+  <h2>My Schedule</h2>
+
+  <div class="table-responsive" style="margin-left: 10px; margin-right: 10px;">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr id="conflict-alert" style="display: none; background-color: #F58E9D;">
+          <td colspan="6">Conflict Exists</td>
+        </tr>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>7:30-8:20</td>
+          <td id="tempCell" name="84935">ICS111</td>
+          <!-- Monday -->
+          <td></td>
+          <!-- Tuesday -->
+          <td id="tempCell" name="84935">ICS111</td>
+          <!-- Wednesday -->
+          <td></td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>8:30-9:20</td>
+          <td></td>
+          <!-- Monday -->
+          <td></td>
+          <!-- Tuesday -->
+          <td></td>
+          <!-- Wednesday -->
+          <td></td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>9:30-10:20</td>
+          <td>ICS211</td>
+          <!-- Monday -->
+          <td></td>
+          <!-- Tuesday -->
+          <td>ICS211</td>
+          <!-- Wednesday -->
+          <td></td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>10:30-11:20</td>
+          <td></td>
+          <!-- Monday -->
+          <td>ENG111</td>
+          <!-- Tuesday -->
+          <td></td>
+          <!-- Wednesday -->
+          <td>ENG111</td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>11:30-12:20</td>
+          <td name="84494">MATH242</td>
+          <!-- Monday -->
+          <td></td>
+          <!-- Tuesday -->
+          <td name="84494">MATH242</td>
+          <!-- Wednesday -->
+          <td></td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>12:30-1:20</td>
+          <td></td>
+          <!-- Monday -->
+          <td></td>
+          <!-- Tuesday -->
+          <td></td>
+          <!-- Wednesday -->
+          <td></td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>1:30-2:20</td>
+          <td></td>
+          <!-- Monday -->
+          <td id="tempCell" name="84095">ICS141</td>
+          <!-- Tuesday -->
+          <td></td>
+          <!-- Wednesday -->
+          <td id="tempCell" name="84095">ICS141</td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>2:30-3:20</td>
+          <td></td>
+          <!-- Monday -->
+          <td></td>
+          <!-- Tuesday -->
+          <td></td>
+          <!-- Wednesday -->
+          <td></td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>3:30-4:20</td>
+          <td></td>
+          <!-- Monday -->
+          <td></td>
+          <!-- Tuesday -->
+          <td></td>
+          <!-- Wednesday -->
+          <td></td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+        <tr>
+          <td>4:30-5:20</td>
+          <td></td>
+          <!-- Monday -->
+          <td></td>
+          <!-- Tuesday -->
+          <td></td>
+          <!-- Wednesday -->
+          <td></td>
+          <!-- Thursday -->
+          <td></td>
+          <!-- Friday -->
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <!-- /main -->
+  <div class="bottom-spacing"></div>
+  </div>
+  </div>
+
+  </div>
+
+  <div class="modal fade" id="infomodal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <h4>
+            <b>Course Summary</b>
+          </h4>
+          <p>Overview of computer science, writing programs. Pre: Recommended: computer experience.</p>
+          <br>
+          <h4>
+            <b>Late Breaking Information</b>
+          </h4>
+          <p class="professor-new-info">2/28/14 Ravi Narayan: This class will now be available with a WI credit.</p>
+          <div id="messagebox" class="add-comment-area">
+            <p>
+              <b>New Message:</b>
+            </p>
+            <textarea rows="4" cols="50"></textarea>
+          </div>
+          <p>12/15/13 Jonathan Ortal: Professor Narayan is in the process of trying to make ICS 111 a WI credit.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="addmessage" class="btn btn-primary">Add Message</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <div class="modal fade" id="infomodal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <h4>
+            <b>Course Summary</b>
+          </h4>
+          <p>Logic, sets, functions, matrices, algorithmic concepts, mathematical reasoning, recursion, counting
+            techniques, probability theory.</p>
+          <br>
+          <h4>
+            <b>Late Breaking Information</b>
+          </h4>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add Message</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <div class="modal fade" id="infomodal3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <h4>
+            <b>Course Summary</b>
+          </h4>
+          <p>Program organization paradigms, programming environments, implementation of a module from
+            specifications, the C and C++ programming languages. Pre: 211 or consent.</p>
+          <br>
+          <h4>
+            <b>Late Breaking Information</b>
+          </h4>
+          <p class="professor-new-info">12/10/14 Julia Patriarche: This class will be conducted as an online course.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add Message</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+
+  <div class="modal fade" id="advModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-title" id="myModalLabel">
+            <b>Advanced Search</b>
+          </h4>
+          <br> <select class="form-control" placeholder="Department">
+            <option>Select your Department</option>
+            <option>Academy for Creative Media (ACM)</option>
+            <option>Accounting (ACC)</option>
+            <option>Aerospace Studies (AS)</option>
+            <option>...</option>
+            <option>Information & Computer Science (ICS)</option>
+          </select> <br> <select class="form-control" placeholder="Course Title">
+            <option>Course Title</option>
+            <option>Intro to CS I (ICS 111)</option>
+            <option>Discrete Math for CS I (ICS 141)</option>
+            <option>Intro to CS II (ICS 211)</option>
+            <option>...</option>
+            <option>Topcs in Software (ICS 691)</option>
+          </select> <br> <label><b>Days:</b></label> <br> <label class="checkbox-inline"> <input
+            type="checkbox" id="inlineCheckbox1" value="option1" style=""> Sunday
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            Monday
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            Tuesday
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            Wednesday
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            Thursday
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            Friday
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            Saturday
+          </label> <br> <br> <label><b>Time Range:</b></label> <br> <b><span id="time"></span></b>
+          <div id="slider-range"></div>
+          <br> <label style="margin-right: 2px;"><b>Focus</b>: </label> <label class="checkbox-inline"> <input
+            type="checkbox" id="inlineCheckbox1" value="option1" style=""> ETH
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            HAP
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            OC
+          </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
+            WI
+          </label> <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <!-- both buttons close modal for now -->
+          <button type="button" class="btn btn-success" data-dismiss="modal">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 </body>
