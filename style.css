@@ -581,6 +581,28 @@ margin-left: 10px;
   color: red;
 }
 
+#search-dept {
+  max-width: 200px;
+}
+
+#search-course {
+  max-width: 150px;
+  margin-left: 10px;
+}
+
+#search-days {
+  margin-left: 10px;
+}
+
+.checkbox-inline {
+  margin-left: 10px;
+}
+
+.navbar-left {
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
 #lg-menu {
   font-size: 18px;
 }
