@@ -3,6 +3,13 @@
   width: 97%;
 }
 
+.watchicon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
 /** instructor table **/
 .ins-table {
 	font-family: verdana,arial,sans-serif;
@@ -48,16 +55,31 @@
     width:620px;
     margin:15px
 }
-#searchForm{
-    /* The search form. */
-    background-color:#005837;
-    padding:50px 50px 30px;
-    margin:0px;
-    position:relative;
 
-    -moz-border-radius:16px;
-    -webkit-border-radius:16px;
-    border-radius:16px;
+#searchFormWrapper{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+#searchFormWrapper .checkbox label {
+  padding:3px;
+}
+
+#selDept{
+  width: 273px;
+}
+
+#selCourse{
+  width: 200px;
+}
+
+#selInstructor{
+  width: 150px;
+}
+
+#resultsHeader{
+  margin-top: 10px;
 }
 
 fieldset{
@@ -446,7 +468,6 @@ height: 100%;
   margin: 10px;
   border: solid;
   border-spacing: 10px;
-  max-width: 1000px;
 }
 
 .my-courses-table {
@@ -536,20 +557,13 @@ margin-left: 10px;
 }
 
 #time {
-  margin-left: 125px;
+  margin-left: 55px;
 }
 
 .infoicon {
   width: 25px;
   height: 25px;
   cursor: pointer;
-}
-
-.watchicon {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  margin-left: 5px;
 }
 
 .classinfo {
