@@ -468,6 +468,7 @@ height: 100%;
   margin: 10px;
   border: solid;
   border-spacing: 10px;
+  max-width: 1000px;
 }
 
 .my-courses-table {
@@ -606,6 +607,12 @@ margin-left: 10px;
 
 #search-days {
   margin-left: 10px;
+}
+
+#search-time {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
 
 .checkbox-inline {

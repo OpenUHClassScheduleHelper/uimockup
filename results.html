@@ -342,6 +342,25 @@ $(document).ready(function() {
 				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> Saturday </label></li>
 				</ul>
 			</li>
+			<li>
+			<button type="button" class="btn btn-default dropdown-toggle" id="search-days" data-toggle="dropdown">
+				Focus/Gen Ed. <span class="caret"></span>
+			</button>
+				<ul class="dropdown-menu checkbox-dropdown" role="menu">
+				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> ETH </label></li>
+				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> HAP </label></li> 
+				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> OC </label></li> 
+				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> WI </label></li> 
+				</ul>
+			</li>
+			<li>
+			<button type="button" class="btn btn-default dropdown-toggle" id="search-days" data-toggle="dropdown">
+				Time Range <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu checkbox-dropdown" id="search-time" role="menu">
+			<li><b><span id="time"></span></b><div id="slider-range"></div></li>
+			</ul>
+			</li>
 		  </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" style="color: black;">Search</a></li>
