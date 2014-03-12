@@ -28,17 +28,19 @@
   <script type="text/javascript">
 		<!--
 			div = {
-				show : function(elem) {
+				hide : function(elem) {
 					var input_list = document.getElementsByName(elem);
 					for ( var i = 0; i < input_list.length; i++) {
 						input_list[i].style.visibility = 'hidden';
 					}
+                    document.getElementById(elem).className = 'defaultRow';
 				},
-				hide : function(elem) {
+				show : function(elem) {
 					var input_list = document.getElementsByName(elem);
 					for ( var i = 0; i < input_list.length; i++) {
 						input_list[i].style.visibility = 'visible';
 					}
+                    document.getElementById(elem).className = 'tempRow';
 				}
 			}
 			-->
@@ -53,6 +55,7 @@
 						input_list[i].style.backgroundColor = '#F58E9D';
 					}
 					document.getElementById('conflict-alert').style.display = 'table-row';
+					document.getElementById('84494').className = 'conflictRow';
 				},
 				hide : function(elem) {
 					var input_list = document.getElementsByName(elem);
@@ -60,6 +63,7 @@
 						input_list[i].style.backgroundColor = 'white';
 					}
 					document.getElementById("conflict-alert").style.display = "none";
+                    document.getElementById('84494').className = 'defaultRow';
 				}
 			}
 			-->
@@ -444,7 +448,7 @@
         <th></th>
       </tr>
 
-      <tr onMouseOut="div.show('84935')" onMouseOver="div.hide('84935')">
+      <tr id="84935" onMouseOut="div.hide('84935')" onMouseOver="div.show('84935')">
         <td><a id="classinfobutton1">84935</a></td>
         <td>ICS 111</td>
         <td>Intro to Computer Science I</td>
@@ -462,7 +466,7 @@
       </tr>
 
 
-      <tr onMouseOut="div.show('84095')" onMouseOver="div.hide('84095')">
+      <tr id="84095" onMouseOut="div.hide('84095')" onMouseOver="div.show('84095')">
         <td><a id="classinfobutton2">84095</a></td>
         <td>ICS 141</td>
         <td>Discrete Math for CS I</td>
@@ -479,7 +483,7 @@
       </tr>
 
 
-      <tr onMouseOut="conflict.hide('84494')" onMouseOver="conflict.show('84494')">
+      <tr id="84494" onMouseOut="conflict.hide('84494')" onMouseOver="conflict.show('84494')">
         <td><a id="classinfobutton3">84494</a></td>
         <td>ICS 212</td>
         <td>Program Structure</td>
@@ -794,8 +798,7 @@
             Friday
           </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style="">
             Saturday
-          </label> <br>
-          <br> <label><b>Time Range:</b></label> <br> <b><span id="time"></span></b>
+          </label> <br> <br> <label><b>Time Range:</b></label> <br> <b><span id="time"></span></b>
           <div id="slider-range"></div>
           <br> <label style="margin-right: 2px;"><b>Focus</b>: </label> <label class="checkbox-inline"> <input
             type="checkbox" id="inlineCheckbox1" value="option1" style=""> ETH
