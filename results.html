@@ -307,61 +307,6 @@ $(document).ready(function() {
           <a class="navbar-brand" href="index.html"></a>
         </div>
         <div class="collapse navbar-collapse">
-		  <ul class="nav navbar-nav navbar-left">
-		    <li>
-			<select class="form-control" placeholder="Department" id="search-dept">
-              <option>Select your Department</option>
-              <option>Academy for Creative Media (ACM)</option>
-              <option>Accounting (ACC)</option>
-              <option>Aerospace Studies (AS)</option>
-              <option>...</option>
-              <option>Information & Computer Science (ICS)</option>
-            </select>
-			</li> 
-			<li>
-			<select class="form-control" placeholder="Course Title" id="search-course">
-              <option>Course Title</option>
-              <option>Intro to CS I (ICS 111)</option>
-              <option>Discrete Math for CS I (ICS 141)</option>
-              <option>Intro to CS II (ICS 211)</option>
-              <option>...</option>
-              <option>Topcs in Software (ICS 691)</option>
-            </select> 
-			</li>
-			<li>
-			<button type="button" class="btn btn-default dropdown-toggle" id="search-days" data-toggle="dropdown">
-				Days <span class="caret"></span>
-			</button>
-				<ul class="dropdown-menu checkbox-dropdown" role="menu">
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> Sunday </label></li>
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> Monday </label></li> 
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> Tuesday </label></li> 
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> Wednesday </label></li> 
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> Thursday </label></li> 
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> Friday </label></li> 
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> Saturday </label></li>
-				</ul>
-			</li>
-			<li>
-			<button type="button" class="btn btn-default dropdown-toggle" id="search-days" data-toggle="dropdown">
-				Focus/Gen Ed. <span class="caret"></span>
-			</button>
-				<ul class="dropdown-menu checkbox-dropdown" role="menu">
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> ETH </label></li>
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> HAP </label></li> 
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> OC </label></li> 
-				<li><label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" value="option1" style=""> WI </label></li> 
-				</ul>
-			</li>
-			<li>
-			<button type="button" class="btn btn-default dropdown-toggle" id="search-days" data-toggle="dropdown">
-				Time Range <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu checkbox-dropdown" id="search-time" role="menu">
-			<li><b><span id="time"></span></b><div id="slider-range"></div></li>
-			</ul>
-			</li>
-		  </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" style="color: black;">Search</a></li>
             <li><a href="maps.html" style="color: white;">View Map</a></li>
@@ -385,14 +330,6 @@ $(document).ready(function() {
             <option>Aerospace Studies (AS)</option>
             <option>...</option>
             <option>Information & Computer Science (ICS)</option>
-          </select>        
-		  <select id="selCourse" class="form-control" placeholder="Course Title">
-            <option>Course Title</option>
-            <option>Intro to CS I (ICS 111)</option>
-            <option>Discrete Math for CS I (ICS 141)</option>
-            <option>Intro to CS II (ICS 211)</option>
-            <option>...</option>
-            <option>Topics in Software (ICS 691)</option>
           </select>
 		  <select id="selInstructor" class="form-control" placeholder="Instructor">
             <option>Instructor</option>
@@ -402,6 +339,14 @@ $(document).ready(function() {
             <option>Johnson, Philip</option>
             <option>...</option>
             <option>Sugihara, Kazuo</option>
+          </select>
+		  <select id="selCourse" class="form-control" placeholder="Course Title">
+            <option>Course Title</option>
+            <option>Intro to CS I (ICS 111)</option>
+            <option>Discrete Math for CS I (ICS 141)</option>
+            <option>Intro to CS II (ICS 211)</option>
+            <option>...</option>
+            <option>Topics in Software (ICS 691)</option>
           </select>		  		  
 	  </div>
 	  <div class="checkbox" style="margin-left:5px">
