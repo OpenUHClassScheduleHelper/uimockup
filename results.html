@@ -25,6 +25,14 @@
   <!-- Load Google Fonts -->
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Abel|Ubuntu">
 
+<script>
+function myFunction()
+{
+alert( $('#textarea1').val() );
+}
+</script>
+
+
   <script type="text/javascript">
 		<!--
 			div = {
@@ -377,7 +385,7 @@ $(document).ready(function() {
 
   <!-- results -->
   <div>
-    <h2 id="resultsHeader">Results</h2>
+    <h2 id="resultsHeader" onmouseover="myFunction()">Results</h2>
 
     <div class="visible-sm visible-xs">
       <a class="btn course-dropdown-button" id="resultbutton1" onMouseOut="div.show('84935')"
@@ -724,7 +732,7 @@ $(document).ready(function() {
             <p>
               <b>New Message:</b>
             </p>
-            <textarea rows="4" cols="50"></textarea>
+            <textarea id="textarea1" rows="4" cols="50"></textarea>
           </div>
           <p>12/15/13 Jonathan Ortal: Professor Narayan is in the process of trying to make ICS 111 a WI credit.</p>
         </div>
